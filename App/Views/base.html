@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    ================================================== -->
+    <title>
+        {% block title %}
+
+        {% endblock %}
+    </title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--  The above 3 meta tags *must* come first in the head; any other head
+          content must come *after* these tags -->
+    <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
+
+    <meta name="description" content="
+      {% block metadescription %}
+
+      {% endblock %}
+    ">
+    <meta name="keywords" content="">
+    <!-- GWT acct -->
+    <meta name="google-site-verification" content="" />
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <!-- ckeditor must be in head not just above closing body tag -->
+    <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+
+    {% block css %}
+
+    {% endblock %}
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114.png">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css"  href="/assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="/assets/fonts/font-awesome/css/font-awesome.css">
+
+    <!-- Owl Carousel Slider
+    ================================================== -->
+    <link rel="stylesheet" href="/assets/css/owl.carousel.css" media="screen">
+    <link rel="stylesheet" href="/assets/css/owl.theme.css" media="screen">
+
+    <!-- Stylesheet
+    ================================================== -->
+    <link rel="stylesheet" type="text/css"  href="/assets/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+
+    <!-- Google Fonts
+    ================================================== -->
+    <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,700,300,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+
+    <script type="text/javascript" src="/assets/js/modernizr.custom.js"></script><!-- Modernizr -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Google requirement -->
+    <link rel="alternate" hreflang="en" href="https://challengemyfaith.com">
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="/assets/css/jquery-ui.min.css">
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+</head>
+<body>
+
+  {% include 'topnav.html' %}
+
+  {% block outsidecontainer %}
+
+  {% endblock %}
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+              {% block content %}
+
+
+
+
+              {% endblock %}
+            </div><!-- // .col -->
+        </div><!-- // .row -->
+    </div><!-- // .container -->
+
+
+    <!-- Footer
+    ====================================-->
+    <div id="tf-footer">
+        <div class="container"><!-- Container -->
+            <div class="text-center">
+                <img src="../assets/img/logo.png" class="img-responsive logo" alt="Antelope">
+                <blockquote><a href="#"><em>Challenge My Faith</em></a> is a Minimal, elegant looking theme that is perfect for personal, corporate, business, travel blog, photography, fashion blogging and more. Built with <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.3.2 Framework</a>, it is totally responsive and easy to use.
+                    <footer>Stanley Hauerwas</footer>
+                </blockquote>
+            </div>
+
+            <div class="row"><!-- Row -->
+
+                <div class="col-md-4"> <!-- Footer Widget Area #1 4 Cols -->
+                    <div class="widget newsletter"><!-- Newsletter Subscription -->
+                        <h4>Newsletter</h4>
+                        <div class="widget-wrap">
+                            <p>Sign up to receive updates and the latests news about Antelope. We respect your privacy and we don't spam.</p>
+                            <form>
+                                <input type="text" class="form-control" placeholder="Your Email">
+                                <button type="submit" class="btn btn-default btn-block tf-btn color">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- end Footer Widget Area #1 4 Cols -->
+
+                <div class="col-md-4"> <!-- Footer Widget Area #2 4 Cols -->
+                    <div class="widget page-links"><!-- Social Media Connection -->
+                        <h4>Page Links</h4>
+                        <div class="widget-wrap">
+                            <ul class="list-unstyled links"><!-- Social Share -->
+                                <li><a href="#">Travel</a></li>
+                                <li><a href="#">Fashion</a></li>
+                                <li><a href="#">Photography</a></li>
+                                <li><a href="#">Lifestyle</a></li>
+                                <li><a href="#">Blogging</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div><!-- end Footer Widget Area #2 4 Cols -->
+
+                <div class="col-md-4"> <!-- Footer Widget Area #3 4 Cols -->
+                    <div class="widget facebook"><!-- Facebook Like Page -->
+                        <h4>Like Us on Facebook</h4>
+                        <div class="fb-page" data-href="https://www.facebook.com/themeforces?ref=hl" data-width="100%" data-height="400px" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/themeforces"><a href="https://www.facebook.com/themeforces">Themeforces</a></blockquote></div></div>
+                    </div>
+                </div><!-- end Footer Widget Area #3 4 Cols -->
+
+            </div><!-- end Row -->
+        </div><!-- End Container -->
+    </div>
+    <nav class="bottom-footer"> <!-- Footer Bottom Nav-->
+        <div class="container"><!-- Container -->
+            <a href="#top" class="scroll top"><i class="fa fa-long-arrow-up"></i></a> <!-- Go To Top Link -->
+            <p class="copyright-txt">© 2015 Copyright by ThemeForces | All rights reserved</p>
+        </div><!-- End Container -->
+    </nav>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="/assets/js/jquery.1.11.2.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="/assets/js/owl.carousel.js"></script><!-- Owl Carousel Plugin -->
+    <script type="text/javascript" src="/assets/js/SmoothScroll.js"></script><!-- Smooth Scroll Effect -->
+
+    <!-- Javascripts
+    ================================================== -->
+    <script type="text/javascript" src="/assets/js/main.js"></script>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.0/jquery.validate.js"></script>
+    <script src="//use.fontawesome.com/6acf38a2cb.js"></script>
+    {% if session.user == true and session.access_level == 2 %}
+      <script src="//cdn.ckeditor.com/4.6.2/standard/ckeditor.js"></script>
+      <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ckeditor/4.5.10/ckeditor.js"></script> -->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>
+      <script src="//code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    {% endif %}
+
+
+    {% block bottomjs %}
+
+    {% endblock %}
+
+  {% include '/Quantcast/index.html' %}
+  {% include '/Google/google-analytics.html' %}
+  </body>
+</html>

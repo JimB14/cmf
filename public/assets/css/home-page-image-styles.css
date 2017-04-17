@@ -1,0 +1,151 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/*
+    Created on : Mar 16, 2016, 4:52:25 PM
+    Author     : Jim
+*/
+
+
+/*  Simon's answer deep in comments of checked response:; http://stackoverflow.com/questions/20763684/full-width-image-with-fixed-height */
+#image-container {
+    /*background-image: url(../images/2.jpg);*/
+    background-image: url(../images/3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    padding-top: 450px; /* This somehow sets the height of the image */
+}
+
+.home-image {
+    position:relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background-image: url(../images/dot-dark.png);
+    background-repeat: repeat;
+}
+
+/*
+.home-image:after {
+    content: "";
+    position:absolute;
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background-image: url(../images/carousel/2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    top:0px;
+    left: 0px;
+    bottom:100px;
+    right:0px;
+    z-index: -1;
+}
+
+.home-image h1{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0px;
+    font-size: 69px;
+}
+*/
+
+#image-container h1{
+    text-align: center;
+    color: #fff;
+    padding: 20px 0px;
+    font-size: 60px;
+}
+
+.home-image-text ul {list-style-type: none; display:inline-block}
+.home-image-text h3 {font-size: 36px;}
+.home-image-text h4 {font-size: 28px;}
+.home-image-text li {font-size: 20px;}
+
+.home-image-text {
+    font-family: 'Yantramanav', sans-serif;
+    color: #fff;
+    text-align: center;
+}
+
+.home-image-text {
+    position: relative;
+    top: -333px;  /*-156px;*/
+}
+
+.yantramanav-font{
+    font-family: 'Yantramanav', sans-serif;
+    font-size:52px;
+    font-weight:300;
+}
+
+.full-width-bg-color {
+    position:absolute;
+    top: 9px;  /*96px;*/
+    width:100%;
+    /*background-color: #000;
+    opacity: .35;*/
+}
+
+.stroke{
+     text-shadow:
+    1px 1px 0 #000,
+   -1px -1px 0 #000,
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+.margintopminus311 {
+  margin-top: -311px;
+}
+
+.margintopminus366 {
+  margin-top: -366px;
+}
+
+/* - - -  @media MUST be below rules to which it applies  - - - - */
+
+@media (max-width:1199px) and (min-width:991px){
+    .home-image-text h4 {font-size: 24px;}
+    .home-image-text li {font-size: 20px;}
+    .yantramanav-font{font-size:42px; }
+    #image-container h1{font-size: 44px;}
+    .home-image-text {top:-346px; }
+}
+
+@media (max-width:990px) and (min-width:768px){
+    .home-image-text h4 {font-size: 24px;}
+    .home-image-text li {font-size: 20px;}
+    .yantramanav-font{font-size:42px; }
+    #image-container h1{font-size: 34px;}
+    .home-image-text {top:-337px; }
+}
+
+/* landscape iPhone 5, 6, 6 Plus*/
+@media (max-width:767px) and (min-width:568px){
+    #image-container h1{font-size: 26px;}
+    .home-image-text {top:-366px; }
+    .home-page-image-text {text-align:center;}
+    .home-image-text h2 {font-size: 26px;}
+    .home-image-text h3 {font-size: 26px;}
+}
+
+/* landscape iPhone 5, 6, 6 Plus*/
+@media (max-width:567px) and (min-width:436px){
+     #image-container h1{font-size: 35px;}
+    .home-image-text {top:-224px; }
+}
+
+@media (max-width:435px) and (min-width:320px){
+    #image-container{display:none;}
+    .navbar-header{padding-bottom: 61px;}
+    .margintopminus366 {
+      margin-top: -87px;
+    }
+}

@@ -1,0 +1,237 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Success
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-wrapper">
+    <div class="row">
+
+        <div class="col-md-12">
+            <h1>Success </h1>
+            <hr>
+        </div>
+
+        <div class="col-md-8">
+
+            {% if message %}
+              <h3 style="margin-top: 0px">
+                {{ message }}
+              </h3>
+              {% if message2 %}
+                <h4 style="margin-top: 0px">
+                  <img src="/assets/images/stop.jpg" height="100">
+                  {{ message2 }}
+                </h4>
+                <h3>
+                  <a href="/login">Log In</a>
+                </h3>
+              {% endif %}
+              <br><br><br><br>
+            {% endif %}
+
+
+            {% if success_registration == 'true' %}
+              <h3 style="margin-top: 0px">
+                {{ success_registration1 }}
+              </h3>
+              <p style="margin-top: 15px">
+                {{ success_registration2 }}
+              </p>
+              <br><br><br><br>
+            {% endif %}
+
+
+            {% if acct_activated == 'true' %}
+              <h3 style="margin-top: 0px">
+                {{ acct_activated1 }}
+              </h3>
+              <p style="margin-top: 15px">
+                During the next few minutes you will:
+                  <ul>
+                    <li>Authorize your payment</li>
+                    <li>Create your company profile</li>
+                    <li>Answer three security questions</li>
+                    <li>Create your broker profile</li>
+                  </ul>
+              </p>
+              <p>
+                  During this process, you will Log In three times to save your
+                  information. YOU CANNOT SKIP ANY STEPS.
+              </p>
+              </p>
+                Please note that all the data that you enter can be changed in
+                the Admin Panel after you complete your registration and Log In.
+              </p>
+              <h3>
+                Let&apos;s get started!
+              </h3>
+              <h4 style="margin-top: 15px">
+                <a href="/login">Click here to Log In</a>
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+
+            {% if subscribe_success == 'true' %}
+              <h3 style="margin-top: 0px">
+                Congratulations {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ subscribe_msg1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ subscribe_msg2 }}
+              </p>
+              <p style="margin-top: 15px">
+                {{ subscribe_msg3 }}
+              </p>
+              <h4 style="margin-top: 20px; font-weight:bold;">
+                {{ subscribe_msg4 }}
+              </h4>
+              <h4 style="margin-top: 15px">
+                <a href="/login">{{ subscribe_msg5 }}</a>
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if cancelpayment == 'true' %}
+              <h3 style="margin-top: 10px">
+                {{ cancel_message1 }}
+              </h3>
+              <p style="margin-top: 15px">
+                {{ cancel_message2 }}
+              </p>
+              <p style="margin-top: 15px">
+                {{ cancel_message3 }}
+              </p>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if contact_broker == 'true' %}
+              <h3 style="margin-top: 0px">
+                Thank you {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ contact_msg1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ contact_msg2 }}
+              </p>
+              <h4 style="margin-top: 20px; font-weight:bold;">
+                {{ contact_msg3 }}
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if new_card_authorized == 'true' %}
+              <h3 style="margin-top: 0px">
+                Thank you {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ new_card_authorized1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ new_card_authorized2 }}
+              </p>
+              <h4 style="margin-top: 15px">
+                {{ new_card_authorized3 }}
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if account_reactivated == 'true' %}
+              <h3 style="margin-top: 0px">
+                Thank you {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ account_reactivated1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ account_reactivated2 }}
+              </p>
+              <h4 style="margin-top: 15px">
+                {{ account_reactivated3 }}
+              </h4>
+              <h3 style="margin-top: 15px">
+                <a href="/login">{{ account_reactivated4 }}</a>
+              </h3>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if register_success == 'true' %}
+              <h3 style="margin-top: 0px">
+                Thank you {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ register_success1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ register_success2 }}
+              </p>
+              <h3 style="margin-top: 15px">
+                <a href="/login">{{ register_success3 }}</a>
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ register_success4 }}
+              </h4>
+              <h4 style="margin-top: 15px">
+                {{ register_success5 }}
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if added_agent_success == 'true' %}
+              <h3 style="margin-top: 0px">
+                Congratulations {{ first_name }} {{ last_name}}!
+              </h3>
+              <h4 style="margin-top: 15px">
+                {{ added_agent_success1 }}
+              </h4>
+              <p style="margin-top: 15px">
+                {{ added_agent_success2 }}
+              </p>
+              <p style="margin-top: 15px">
+                {{ added_agent_success3 }}
+              </p>
+              <h4 style="margin-top: 15px">
+                <a href="/admin/brokers/add-new-agent?id={{ broker_id }}">{{ added_agent_success4 }}</a>
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if pwdchange == 'true' %}
+              <h4 style="margin-top: 15px">
+                Your password has been changed.
+              </h4>
+              <h4 style="margin-top: 15px">
+                <a href="/login">Click here to Log In using your new password</a>
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+            {% if testimonialsuccess == 'true' %}
+              <h3 style="margin-top: 15px">
+                Thanks {{ user.first_name }} {{ user.last_name }}! Your testimonial
+                was successfully submitted!
+              </h3>
+              <h4 style="margin-top: 15px">
+                Your testimonial will be reviewed before being published. If
+                approved, you will receive an email notification with a link to
+                view it on AmericanBizTrader.com.
+              </h4>
+              <br><br><br><br>
+            {% endif %}
+
+        </div>
+
+        <div class="col-md-4">
+
+        </div><!-- // .col-md-4  -->
+    </div><!-- // .row  -->
+</div><!-- // .page-wrapper -->
+
+{% endblock %}

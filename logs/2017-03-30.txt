@@ -1,0 +1,1024 @@
+[30-Mar-2017 19:51:37 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:39 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:41 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:43 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:45 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:47 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:49 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:51 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:53 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:55 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:51:57 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:04 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:06 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:08 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:10 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:12 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:14 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:16 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:18 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:20 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:22 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:24 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:26 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:28 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:30 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:32 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:34 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:36 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:38 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:40 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:42 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:44 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:51 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:53 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:55 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:52:58 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:00 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:02 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:04 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:06 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:08 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:10 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:12 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:14 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:16 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:18 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:20 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:22 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:24 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:26 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:28 Europe/Berlin] Uncaught exception: 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\Core\Model.php(33): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Models\BrokerAgent.php(176): Core\Model::getDB()
+#2 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Home.php(46): App\Models\BrokerAgent::getAllBrokerAgents('LIMIT 5', 'WHERE broker_ag...', 'ORDER BY broker...')
+#3 [internal function]: App\Controllers\Home->indexAction()
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#6 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('')
+#7 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Model.php' on line 33
+[30-Mar-2017 19:53:30 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(80): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:00:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:00:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:00:38 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:01:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:05:13 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:06:47 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:07:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:09:09 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php(34): header('Location: /logi...')
+#2 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(55): App\Controllers\Admin\Brokers->before()
+#3 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('myaccount', Array)
+#4 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('admin/brokers/m...')
+#5 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php' on line 34
+[30-Mar-2017 20:09:09 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74
+[30-Mar-2017 20:09:49 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:10 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:27 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:34 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:35 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:10:36 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(87): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:13:15 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:13:22 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:14:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:14:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:14:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:14:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:14:18 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:18:53 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 30, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Logout.php(30): header('Location: /logi...')
+#2 [internal function]: App\Controllers\Logout->indexAction()
+#3 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(57): call_user_func_array(Array, Array)
+#4 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('index', Array)
+#5 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('logout')
+#6 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Logout.php' on line 30
+[30-Mar-2017 20:18:53 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74
+[30-Mar-2017 20:20:00 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:20:44 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:20:44 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:20:44 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:20:44 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:20:44 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:19 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:21:41 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:22:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:22:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:22:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:22:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:22:07 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:23:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:23:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:23:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:23:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:23:56 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:11 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:25 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:28:45 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:32:02 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 125, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Login.php(125): header('Location: /')
+#2 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): App\Controllers\Login->loginUser()
+#3 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('login/login-use...')
+#4 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Login.php' on line 125
+[30-Mar-2017 20:32:02 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74
+[30-Mar-2017 20:32:17 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:32:23 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('favicon.ico')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:32:33 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 20:33:01 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php(34): header('Location: /logi...')
+#2 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(55): App\Controllers\Admin\Brokers->before()
+#3 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('myaccount', Array)
+#4 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('admin/brokers/m...')
+#5 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php' on line 34
+[30-Mar-2017 20:33:01 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74
+[30-Mar-2017 21:00:42 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[30-Mar-2017 21:01:17 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php(34): header('Location: /logi...')
+#2 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(55): App\Controllers\Admin\Brokers->before()
+#3 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('addnewagent', Array)
+#4 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('admin/brokers/a...')
+#5 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php' on line 34
+[30-Mar-2017 21:01:17 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74

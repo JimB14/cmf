@@ -1,0 +1,23 @@
+[03-Apr-2017 17:33:06 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[03-Apr-2017 17:35:59 Europe/Berlin] Uncaught exception: 'Exception' with message 'No route matched'
+Stack trace: #0 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('assets/images/u...')
+#1 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\Core\Router.php' on line 194
+[03-Apr-2017 17:36:31 Europe/Berlin] Uncaught exception: 'ErrorException' with message 'Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68)'
+Stack trace: #0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 34, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php(34): header('Location: /logi...')
+#2 C:\xampp\htdocs\americanbiztrader.site\Core\Controller.php(55): App\Controllers\Admin\Brokers->before()
+#3 C:\xampp\htdocs\americanbiztrader.site\Core\Router.php(179): Core\Controller->__call('myaccount', Array)
+#4 C:\xampp\htdocs\americanbiztrader.site\public\index.php(90): Core\Router->dispatch('admin/brokers/m...')
+#5 {main}
+Thrown in  'C:\xampp\htdocs\americanbiztrader.site\App\Controllers\Admin\Brokers.php' on line 34
+[03-Apr-2017 17:36:31 Europe/Berlin] PHP Fatal error:  Uncaught ErrorException: Cannot modify header information - headers already sent by (output started at C:\xampp\htdocs\americanbiztrader.site\Core\View.php:68) in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php:74
+Stack trace:
+#0 [internal function]: Core\Error::errorHandler(2, 'Cannot modify h...', 'C:\\xampp\\htdocs...', 74, Array)
+#1 C:\xampp\htdocs\americanbiztrader.site\Core\Error.php(74): header('Location: /')
+#2 [internal function]: Core\Error::exceptionHandler(Object(ErrorException))
+#3 {main}
+  thrown in C:\xampp\htdocs\americanbiztrader.site\Core\Error.php on line 74
