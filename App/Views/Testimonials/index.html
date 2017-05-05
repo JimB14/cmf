@@ -11,56 +11,56 @@
 
 
 {% block content %}
-<div class="page-wrapper">
-    <div class="row">
-        <div class="col-md-12">
-            <h1>Testimonials</h1>
-            <hr>
-        </div>
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>thoughts shared</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Testimonials</h2>
+      </div>
+  </div>
 
-        <div class="col-md-8">
-            <h3 style="margin-bottom: 30px;">What clients are <i>saying</i> about American Biz Trader
-                <i class="fa fa-quote-left" aria-hidden="true"></i>
-                  . . .
-                <i class="fa fa-quote-right" aria-hidden="true"></i>
-            </h3>
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
+
+            <div class="col-md-10 col-md-offset-1"> <!-- About us content -->
+                <div class="post-block">
+                    <div class="post-detail">
+                        <h3 class="text-center" style="margin-bottom: 30px;">
+                            <i class="fa fa-quote-left" aria-hidden="true"></i>
+                              ...What users are saying...
+                            <i class="fa fa-quote-right" aria-hidden="true"></i>
+                        </h3>
 
 
-            {% for item in testimonials %}
-              <div class="testimonial-wrapper">
-                      <h4>
-                        <strong>
-                          {{ item.title }}
-                        </strong>
-                      </h4>
-                      <p>
-                        {{ item.created_at|date("m-d-Y") }}
-                      </p>
-                  <div class="pull-left">
-                      <i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
+                        {% for item in testimonials %}
+                          <div class="testimonial-wrapper">
+                              <h4>
+                                <strong>
+                                  {{ item.title }}
+                                </strong>
+                              </h4>
+                              <p>
+                                {{ item.user_display_name }} | {{ item.created_at|date("m-d-Y") }}
+                              </p>
+                              <div class="pull-left">
+                                  <i class="fa fa-quote-left fa-3x" aria-hidden="true"></i>
+                              </div>
+                              <div style="margin: 55px 43px 0px 43px">
+                                  {{ item.testimonial|raw }}
+                              </div>
+                          </div><!-- // testimonial-wrapper -->
+                        {% endfor %}
+
+                      </div>
                   </div>
-                  <div style="margin: 55px 43px 0px 43px">
-                      {{ item.testimonial|raw }}
-                  </div>
-                  <div style="margin: 5px 43px 0px 43px">
-                      {% if item.name == 'Dave Didion' %}
-                        {{ item. name }}<br>President<br>American Biz Trader
-                      {% else %}
-                        {{ item.name }}
-                        <br>
-                        {{ item.company }}
-                      {% endif %}
-                  </div>
+              </div>
 
-              </div><!-- // testimonial-wrapper -->
-            {% endfor %}
-
-        </div><!-- // col-md-8  -->
-
-        <div class="col-md-4">
-            <br><br><br><br>
-        </div>
-
-    </div><!-- // .row  -->
-</div>
+          </div><!-- end Row -->
+      </div><!-- End Container -->
+  </div>
 {% endblock %}

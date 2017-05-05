@@ -6,154 +6,111 @@
 
 
 {% block content %}
-
-<div class="page-wrapper">
-    <div class="row">
-
-        <div class="col-md-12">
-            <h1>Register - <span style="font-size: 2.5rem;">Free trial! Your first month is free.</span></h1>
-            <hr>
-        </div>
-
-
-        <div class="col-md-8">
-          <h3 class="bold">Welcome to American Biz Trader</h3>
-          <h5 style="padding-bottom: 15px; color: #838383; line-height: 1.5em;">
-              Please provide the following information to create
-              your account. You must complete this form and submit it
-              successfully to be able to post listings.
-          </h5>
-
-          {% if session.registererror %}
-            <div class="col-sm-offset-3 col-sm-9">
-              {% include 'Error/errormessage.html' %}
-            </div>
-          {% endif %}
-
-          <!--  Display results from ajax_processing/  -->
-          <div id="message"></div>
-
-          {% if success %}
-            <div class="alert alert-success alert-padding">{{ success }}</div>
-          {% endif %}
-
-          <form name="registrationform" id="registrationform" class="form-horizontal"
-              action="register/register-new-user" method="post">
-
-              <!-- honeypot -->
-              <input type="hidden" name="honeypot" id="honeypot">
-
-              <div class="form-group has-feedback">
-                  <label for="register_email" class="col-sm-3 control-label">
-                    Email
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="email" class="form-control email" name="email"
-                        id="register_email" placeholder="user@example.com" autofocus>
-                      <span class="glyphicon form-control-feedback" id="register_email1"></span>
-                  </div>
-              </div>
-
-              <div class="form-group has-feedback">
-                  <label for="verify_email" class="col-sm-3 control-label">
-                    Verify email
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="email" class="form-control" name="verify_email"
-                        id="verify_email" placeholder="user@example.com">
-                      <span class="glyphicon form-control-feedback" id="verify_email1"></span>
-                  </div>
-              </div>
-
-              <div class="form-group has-feedback">
-                  <label for="first_name" class="col-sm-3 control-label">
-                    First name
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="text" class="form-control" name="first_name"
-                        id="first_name" placeholder="First name">
-                      <span class="glyphicon form-control-feedback" id="first_name1"></span>
-                  </div>
-              </div>
-
-              <div class="form-group has-feedback">
-                  <label for="last_name" class="col-sm-3 control-label">
-                    Last name
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="text" class="form-control" name="last_name"
-                        id="last_name" placeholder="Last name">
-                      <span class="glyphicon form-control-feedback" id="last_name1"></span>
-                  </div>
-              </div>
-
-              <div class="form-group has-feedback">
-                  <label for="company" class="col-sm-3 control-label">
-                    Company
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="text" class="form-control" name="company"
-                        id="company" placeholder="Company">
-                      <span class="glyphicon form-control-feedback" id="company1"></span>
-                  </div>
-              </div>
-
-              <div class="form-group has-feedback">
-                  <label for="password" class="col-sm-3 control-label">
-                    Password
-                  </label>
-                  <div class="col-sm-9">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password">
-                      <span class="glyphicon form-control-feedback" id="password1"></span>
-                  </div>
-              </div>
-
-                <div class="form-group has-feedback">
-                    <label for="verify_password" class="col-sm-3 control-label">
-                      Verify password
-                    </label>
-                    <div class="col-sm-9">
-                        <input type="password" class="form-control" name="verify_password"
-                          id="verify_password" placeholder="Verify password">
-                        <span class="glyphicon form-control-feedback" id="verify_password1"></span>
-                    </div>
-                </div>
-
-                <div class="form-group has-feedback has-feedback">
-                      <div class="col-sm-offset-3 col-sm-9">
-                          <div class="checkbox">
-                            <label for="agree">
-                                <input type="checkbox" name="agree" id="agree">
-                                I agree to the Terms and Conditions.
-                                <a href="/terms-conditions">
-                                    Read terms &amp; conditions
-                                </a>
-                            </label>
-                          </div>
-                      </div>
-                </div>
-
-                <hr>
-
-                <div class="form-group has-feedback">
-                    <div class="col-sm-offset-3 col-sm-9">
-                        <button id="registerBtn" type="submit" class="btn btn-primary btn-lg">
-                          Register
-                        </button>
-                    </div>
-                </div>
-
-          </form>
-          <br><br>
-
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>sign up</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Register</h2>
       </div>
+  </div>
 
-      <div class="col-md-4">
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
 
-      </div><!-- // .col-md-4  -->
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="post-block">
+                      <div class="post-detail">
 
-  </div><!-- // .row  -->
-</div><!-- .page-wrapper -->
+                          <h3 class="bold">Welcome to Challenge My Faith</h3>
+                          <h5 style="padding-bottom: 15px; color: #838383; line-height: 1.5em;">
+                              Please provide the following information to create
+                              your account. You must be registered to post comments.
+                          </h5>
+
+                          {% if session.registererror %}
+                              {% include 'Error/errormessage.html' %}
+                          {% endif %}
+
+                          <!--  Display results from ajax_processing/  -->
+                          <div id="message"></div>
+
+                          {% if success %}
+                            <div class="alert alert-success alert-padding">{{ success }}</div>
+                          {% endif %}
+
+                          <form style="padding: 20px;" name="registrationform" id="registrationform" class="form-horizontal"
+                              action="register/register-new-user" method="post">
+
+                              <!-- honeypot -->
+                              <input type="hidden" name="honeypot" id="honeypot">
+
+                              <div class="form-group">
+                                  <input style="background: #fff;" type="email" class="form-control input-field email" name="email"
+                                    id="register_email" placeholder="Email - user@example.com" autofocus>
+                                  <span class="glyphicon form-control-feedback" id="register_email1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                      <input type="email" class="form-control input-field" name="verify_email"
+                                        id="verify_email" placeholder="Verify email - user@example.com">
+                                      <span class="glyphicon form-control-feedback" id="verify_email1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                      <input type="text" class="form-control input-field" name="first_name"
+                                        id="first_name" placeholder="First name">
+                                      <span class="glyphicon form-control-feedback" id="first_name1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                      <input type="text" class="form-control input-field" name="last_name"
+                                        id="last_name" placeholder="Last name">
+                                      <span class="glyphicon form-control-feedback" id="last_name1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                      <input type="password" class="form-control input-field" name="password" id="password" placeholder="Password">
+                                      <span class="glyphicon form-control-feedback" id="password1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                      <input type="password" class="form-control input-field" name="verify_password"
+                                        id="verify_password" placeholder="Verify password">
+                                      <span class="glyphicon form-control-feedback" id="verify_password1"></span>
+                              </div>
+
+                              <div class="form-group">
+                                    <div class="col-sm-offset-3 col-sm-9">
+                                        <div class="checkbox">
+                                          <label for="agree">
+                                              <input type="checkbox" name="agree" id="agree">
+                                              I agree to the Terms and Conditions.
+                                              <a href="/terms-conditions">
+                                                  Read terms &amp; conditions
+                                              </a>
+                                          </label>
+                                        </div>
+                                    </div>
+                              </div>
+
+                              <div class="form-group">
+                                    <button id="registerBtn" type="submit" class="btn btn-default btn-block tf-btn color">
+                                      Register
+                                    </button>
+                              </div>
+
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div><!-- end Row -->
+      </div><!-- End Container -->
+  </div>
 {% endblock %}
 
 
@@ -265,11 +222,11 @@ $(document).ready(function(){
             },
             cache: false,
             success: function(data){
-                var available = '<div class="col-sm-offset-3 col-sm-9 alert alert-success alert-padding text-center">';
+                var available = '<div class="col-sm-12 alert alert-success alert-padding text-center">';
                 available += 'Email address is available!';
                 available += '</div>';
 
-                var not_available = '<div class="col-sm-offset-3 col-sm-9 alert alert-danger alert-padding text-center">';
+                var not_available = '<div class="col-sm-12 alert alert-danger alert-padding text-center">';
                 not_available += 'Sorry, email address entered is not available.';
                 not_available += '</div>';
 
@@ -284,6 +241,13 @@ $(document).ready(function(){
                 alert("An error occurred.");
             }
         });
+    });
+
+    $(".input-field").focus(function(){
+        $(this).css("background-color", "#fff");
+    });
+    $(".input-field").blur(function(){
+        $(this).css("background-color", "#f6f6f6");
     });
 
     // change button text on submit

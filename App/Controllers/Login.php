@@ -84,21 +84,23 @@ use \App\Models\BrokerAgent;
         // echo "</pre>";
         // exit();
 
-        // check if superUser
-        if($user && $user->superUser == 1)
+        // check if user_superuser
+        if($user && $user->user_superuser == 1)
         {
             // log superUser into SiteAdmin
             // log returning user in
             // create unique id & store in SESSION variable
-            $uniqId = md5($user->id);
+            $uniqId = md5($user->user_id);
             $_SESSION['user'] = $uniqId;
             $_SESSION['loggedIn'] = true;
 
             // assign user ID & access_level & full_name to SESSION variables
-            $_SESSION['user_id'] = $user->id;
-            $_SESSION['access_level'] = $user->access_level;
-            $_SESSION['full_name'] = $user->first_name . ' ' . $user->last_name;
-            $_SESSION['superUser'] = 'true';
+            $_SESSION['user_id'] = $user->user_id;
+            $_SESSION['user_status'] = $user->user_status;
+            $_SESSION['full_name'] = $user->user_firstname . ' ' . $user->user_lastname;
+            $_SESSION['user_superuser'] = 'true';
+            $_SESSION['role'] = 'administrator';
+            $_SESSION['user_login_ip'] = $_SERVER['REMOTE_ADDR'];
 
             // session timeout code in front-controller public/index.php
             $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
@@ -107,59 +109,33 @@ use \App\Models\BrokerAgent;
             // echo $_SESSION['user'] . "<br>";
             // echo $_SESSION['loggedIn'] . "<br>";
             // echo $_SESSION['user_id'] . "<br>";
-            // echo $_SESSION['access_level'] . "<br>";
+            // echo $_SESSION['user_status'] . "<br>";
             // echo $_SESSION['full_name'] . "<br>";
-            // echo $_SESSION['superUser'] . "<br>";
+            // echo $_SESSION['user_superuser'] . "<br>";
+            // echo $_SESSION['role'] . "<br>";
             // exit();
-
-            // get broker data (empty array returned for site admin users)
-            $broker = Broker::getBrokerByUserId($user->id);
-
-            if($broker)
-            {
-                // send login notification email to `brokers`.`broker_email`
-                $result = Mail::loginNotification($broker, $user);
-
-            }
 
             header("Location: /");
             exit();
         }
 
-        // get broker data if available
-        $broker = Broker::getBrokerByUserId($user->id);
-
-        if($broker)
+        // check if author
+        if($user && $user->user_status == 5)
         {
-          // store broker ID in variable
-          $broker_id = $broker->broker_id;
-
-          // get count of agent records for broker by broker ID
-          $agent_count = BrokerAgent::getCountOfAgents($broker_id);
-        }
-
-        // // test
-        // echo '<pre>';
-        // print_r($broker);
-        // echo "</pre>";
-        // echo 'Broker ID: ' . $broker_id . '<br>';
-        // echo 'Agent count: ' . $agent_count . '<br>';
-        // exit();
-
-        // check if returning user; if true log in
-        if( ($user) && ($user->first_login == 0) && ($user->current == 1) )
-        {
+            // log superUser into SiteAdmin
             // log returning user in
             // create unique id & store in SESSION variable
-            $uniqId = md5($user->id);
+            $uniqId = md5($user->user_id);
             $_SESSION['user'] = $uniqId;
             $_SESSION['loggedIn'] = true;
 
             // assign user ID & access_level & full_name to SESSION variables
-            $_SESSION['user_id'] = $user->id;
-            $_SESSION['access_level'] = $user->access_level;
-            $_SESSION['full_name'] = $user->first_name . ' ' . $user->last_name;
-            $_SESSION['company'] = $user->company;
+            $_SESSION['user_id'] = $user->user_id;
+            $_SESSION['user_status'] = $user->user_status;
+            $_SESSION['full_name'] = $user->user_firstname . ' ' . $user->user_lastname;
+            $_SESSION['user_superuser'] = 'false';
+            $_SESSION['role'] = 'author';
+            $_SESSION['user_login_ip'] = $_SERVER['REMOTE_ADDR'];
 
             // session timeout code in front-controller public/index.php
             $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
@@ -168,24 +144,51 @@ use \App\Models\BrokerAgent;
             // echo $_SESSION['user'] . "<br>";
             // echo $_SESSION['loggedIn'] . "<br>";
             // echo $_SESSION['user_id'] . "<br>";
-            // echo $_SESSION['access_level'] . "<br>";
+            // echo $_SESSION['user_status'] . "<br>";
             // echo $_SESSION['full_name'] . "<br>";
-            // echo $_SESSION['company'] . "<br>";
+            // echo $_SESSION['user_superuser'] . "<br>";
+            // echo $_SESSION['role'] . "<br>";
             // exit();
 
-            // get broker data
-            $broker = Broker::getBrokerByUserId($user->id);
+            header("Location: /");
+            exit();
+        }
+
+        // check if returning user
+        if($user && $user->user_active == 1)
+        {
+            /* log returning user in  */
+
+            // create unique id & store in SESSION variable
+            $uniqId = md5($user->user_id);
+            $_SESSION['user'] = $uniqId;
+            $_SESSION['loggedIn'] = true;
+
+            // assign various values to SESSION variables
+            $_SESSION['user_id'] = $user->user_id;
+            $_SESSION['user_status'] = $user->user_status;
+            $_SESSION['full_name'] = $user->user_firstname . ' ' . $user->user_lastname;
+            $_SESSION['user_superuser'] = 'false';
+            $_SESSION['role'] = 'user';
+            $_SESSION['user_login_ip'] = $_SERVER['REMOTE_ADDR'];
+
+            // session timeout code in front-controller public/index.php
+            $_SESSION['LAST_ACTIVITY'] = time(); // update last activity time stamp
 
             // test
-            // echo '<pre>';
-            // print_r($broker);
-            // echo "</pre>";
+            // echo $_SESSION['user'] . "<br>";
+            // echo $_SESSION['loggedIn'] . "<br>";
+            // echo $_SESSION['user_id'] . "<br>";
+            // echo $_SESSION['user_status'] . "<br>";
+            // echo $_SESSION['full_name'] . "<br>";
+            // echo $_SESSION['user_superuser'] . "<br>";
+            // echo $_SESSION['role'] . "<br>";
             // exit();
 
-            if($broker)
+            if($user)
             {
-                // send login notification email to `brokers`.`broker_email`
-                $result = Mail::loginNotification($broker, $user);
+                // send login notification email
+                $result = Mail::loginNotification($user);
 
                 if($result)
                 {
@@ -197,92 +200,9 @@ use \App\Models\BrokerAgent;
             }
             else
             {
-                echo "Error retrieving broker data.";
+                echo "Error retrieving user data.";
                 exit();
             }
-        }
-
-        // user who has paid but never logged in = needs to register company
-        if( ($user) && ($user->first_login == 1 && $user->current == 1) )
-        {
-            // get states for drop-down
-            $states = State::getStates();
-
-            // test
-            // echo '<pre>';
-            // print_r($user);
-            // echo '</pre>';
-            // exit();
-
-            // first time logging in (users.first_login === 1)
-            View::renderTemplate('Register/new-user-registration.html', [
-                'user'   => $user,
-                'states' => $states
-            ]);
-            exit();
-        }
-        // new susbscriber who has never logged in or paid
-        elseif ( ($user) && ($user->first_login == 1 && $user->current == 0) )
-        {
-
-            // send for payment; pass action for new subscription
-            View::renderTemplate('Paypal/index.html', [
-                'user'              => $user,
-                'new_subscription'  => 'true',
-                'pagetitle'         => 'Subscribe - includes one month FREE',
-                'subscriptiononly'  => Config::SUBSCRIPTION,
-                'action'            => '/subscribe/process-payment-with-free-trial?id='.$user->id
-            ]);
-            exit();
-        }
-        // user who cancelled payment (requires reactivation)
-        elseif ( ($user) && ($user->first_login == 0 && $user->current == 0 && $user->active == 1) )
-        {
-
-            $pagetitle = 'Reactivate account';
-
-            // calculate new rate
-            $reactivation_rate = $agent_count * Config::SUBSCRIPTION;
-
-            // format for PayPal
-            $reactivation_rate = number_format($reactivation_rate, 2);
-
-            // test
-            // echo '<pre>';
-            // print_r($broker);
-            // echo "</pre>";
-            // echo '$broker_id: ' . $broker_id . '<br>';
-            // echo '$agent_count: ' . $agent_count . '<br>';
-            // echo '$reactivation_rate: ' . $reactivation_rate . '<br>';
-            // echo '$pagetitle: ' . $pagetitle . '<br>';
-            // exit();
-
-            // send for payment
-            View::renderTemplate('Paypal/index.html', [
-                'user'              => $user,
-                'pagetitle'         => $pagetitle,
-                'reactivate'        => 'true',
-                'agent_count'       => $agent_count,
-                'reactivation_rate' => $reactivation_rate,
-                'new_agent_cost'    => Config::SUBSCRIPTION,
-                'subscriptiononly'  => Config::SUBSCRIPTION,
-                'action'            => '/subscribe/process-reactivation?user_id='.$user->id
-            ]);
-            exit();
-        }
-        elseif ( ($user) && ($user->first_login == 0 && $user->current == 0) )
-        {
-            // send for payment
-            View::renderTemplate('Paypal/index.html', [
-                'user'              => $user,
-                'new_subscription'  => 'true'
-            ]);
-            exit();
-        }
-        else
-        {
-            echo "Error logging in. Please check credentials and try again.";
-            exit();
         }
     }
 

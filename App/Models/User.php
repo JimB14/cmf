@@ -10,6 +10,131 @@ class User extends \Core\Model
 {
 
     /**
+     * gets User data
+     *
+     * @param  integer $user_id The user ID
+     *
+     * @return Object           The user data
+     */
+    public static function getAuthors($user_status)
+    {
+        // establish db connection
+        $db = static::getDB();
+
+        try
+        {
+            $sql = "SELECT * FROM users
+                    WHERE user_status = :user_status
+                    ORDER BY user_lastname";
+            $stmt = $db->prepare($sql);
+            $parameters = [
+                ':user_status' => $user_status
+            ];
+            $stmt->execute($parameters);
+
+            // store user data in object
+            $authors = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            // return object to Register controller
+            return $authors;
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+
+
+
+    /**
+     * gets author data
+     *
+     * @param  integer  $user_id  The user ID
+     *
+     * @return Object             The user data
+     */
+    public static function getAuthor($post_author)
+    {
+        // establish db connection
+        $db = static::getDB();
+
+        try
+        {
+            $sql = "SELECT * FROM users
+                    WHERE user_id = :user_id
+                    AND user_status = :user_status";
+            $stmt = $db->prepare($sql);
+            $parameters = [
+                ':user_id'      => $post_author,
+                ':user_status'  => 5
+            ];
+            $stmt->execute($parameters);
+
+            // store user data in object
+            $author = $stmt->fetch(PDO::FETCH_OBJ);
+
+            // return object to controller
+            return $author;
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+
+
+    /**
+     * gets User data
+     *
+     * @param  Integer  $user_id  The user ID
+     *
+     * @return Object             The user data
+     */
+    public static function getUser($user_id)
+    {
+        try
+        {
+            // establish db connection
+            $db = static::getDB();
+
+            $sql = "SELECT * FROM users
+                    WHERE user_id = :user_id";
+            $stmt = $db->prepare($sql);
+            $parameters = [
+                ':user_id' => $user_id
+            ];
+            $stmt->execute($parameters);
+
+            // store user data in object
+            $user = $stmt->fetch(PDO::FETCH_OBJ);
+
+            // return object to Register controller
+            return $user;
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
      * checks if email is in users table
      *
      * @param  string   $email  The user's email address
@@ -30,11 +155,11 @@ class User extends \Core\Model
             $db = static::getDB();
 
             $sql = "SELECT * FROM users
-                    WHERE email = :email
+                    WHERE user_email = :user_email
                     LIMIT 1";
             $stmt = $db->prepare($sql);
             $parameters = [
-                ':email' => $email
+                ':user_email' => $email
             ];
             $stmt->execute($parameters);
             $result = $stmt->fetchAll(PDO::FETCH_OBJ);
@@ -76,10 +201,9 @@ class User extends \Core\Model
         $email = isset($_REQUEST['email']) ? filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL) : '';
         $first_name = isset($_REQUEST['first_name']) ? filter_var($_REQUEST['first_name'], FILTER_SANITIZE_STRING) : '';
         $last_name = isset($_REQUEST['last_name']) ? filter_var($_REQUEST['last_name'], FILTER_SANITIZE_STRING) : '';
-        $company = isset($_REQUEST['company']) ? filter_var($_REQUEST['company'], FILTER_SANITIZE_STRING) : '';
         $user_ip = $_SERVER['REMOTE_ADDR'];
 
-        if($first_name === '' || $last_name === '' || $email === '' || $company === '')
+        if($first_name === '' || $last_name === '' || $email === '' )
         {
             $_SESSION['registererror'] = '*All fields are required.';
             $okay = false;
@@ -137,6 +261,7 @@ class User extends \Core\Model
         // echo $email . '<br>';
         // echo $pass . '<br>';
         // echo $okay . '<br>';
+        // echo $user_ip . '<br>';
         // exit();
 
         if($okay == true)
@@ -147,16 +272,15 @@ class User extends \Core\Model
             // insert user data into users table
             try
             {
-                $sql = "INSERT INTO users (first_name, last_name, company, email, pass, user_ip)
-                        VALUES (:first_name, :last_name, :company, :email, :pass, :user_ip)";
+                $sql = "INSERT INTO users (user_firstname, user_lastname, user_email, user_pass, user_ip)
+                        VALUES (:user_firstname, :user_lastname, :user_email, :user_pass, :user_ip)";
                 $stmt = $db->prepare($sql);
                 $parameters = [
-                    ':first_name' => $first_name,
-                    ':last_name'  => $last_name,
-                    ':company'    => $company,
-                    ':email'      => $email,
-                    ':pass'       => $pass,
-                    ':user_ip'    => $user_ip
+                    ':user_firstname' => $first_name,
+                    ':user_lastname'  => $last_name,
+                    ':user_email'     => $email,
+                    ':user_pass'      => $pass,
+                    ':user_ip'        => $user_ip
                 ];
                 $result = $stmt->execute($parameters);
 
@@ -201,73 +325,8 @@ class User extends \Core\Model
 
 
 
-    /**
-     * gets User data
-     *
-     * @param  integer $user_id The user ID
-     *
-     * @return Object           The user data
-     */
-    public static function getUser($user_id)
-    {
-        // establish db connection
-        $db = static::getDB();
-
-        try
-        {
-            $sql = "SELECT * FROM users WHERE id = :id";
-            $stmt = $db->prepare($sql);
-            $parameters = [
-                ':id' => $user_id
-            ];
-            $stmt->execute($parameters);
-
-            // store user data in object
-            $user = $stmt->fetch(PDO::FETCH_OBJ);
-
-            // return object to Register controller
-            return $user;
-        }
-        catch(PDOException $e)
-        {
-            echo $e->getMessage();
-            exit();
-        }
-    }
 
 
-    /**
-     * gets User data by brokers ID
-     *
-     * @param  integer  $broker_id   The broker's ID
-     * @return Object               The user data
-     */
-    public static function getUserByBrokerUserId($broker_user_id)
-    {
-        // establish db connection
-        $db = static::getDB();
-
-        try
-        {
-            $sql = "SELECT * FROM users WHERE id = :id";
-            $stmt = $db->prepare($sql);
-            $parameters = [
-                ':id' => $id
-            ];
-            $stmt->execute($parameters);
-
-            // store user data in object
-            $user = $stmt->fetch(PDO::FETCH_OBJ);
-
-            // return object to Siteadmin controller
-            return $user;
-        }
-        catch(PDOException $e)
-        {
-            echo $e->getMessage();
-            exit();
-        }
-    }
 
 
 
@@ -398,11 +457,11 @@ class User extends \Core\Model
                 $db = static::getDB();
 
                 $sql = "SELECT * FROM users WHERE
-                        email = :email
-                        AND active = 1";
+                        user_email = :user_email
+                        AND user_active = 1";
                 $stmt = $db->prepare($sql);
                 $parameters = [
-                    ':email' => $email
+                    ':user_email' => $email
                 ];
                 $stmt->execute($parameters);
                 $user = $stmt->fetch(PDO::FETCH_OBJ);
@@ -424,7 +483,7 @@ class User extends \Core\Model
         }
 
         // returning user verified
-        if( (!empty($user)) && (password_verify($password, $user->pass)) )
+        if( (!empty($user)) && (password_verify($password, $user->user_pass)) )
         {
             // return $user object to Login controller
             return $user;
@@ -627,11 +686,11 @@ class User extends \Core\Model
             $db = static::getDB();
 
             $sql = "SELECT * FROM users
-                    WHERE email = :email
-                    AND active = 1";
+                    WHERE user_email = :user_email
+                    AND user_active = 1";
             $stmt = $db->prepare($sql);
             $parameters = [
-                ':email' => $email
+                ':user_email' => $email
             ];
             $stmt->execute($parameters);
             $user = $stmt->fetch(PDO::FETCH_OBJ);

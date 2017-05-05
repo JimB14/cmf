@@ -31,6 +31,12 @@
 
     {% endblock %}
 
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script type="text/javascript" src="/assets/js/jquery.1.11.2.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script type="text/javascript" src="/assets/js/bootstrap.js"></script>
+
     <!-- Favicons
     ================================================== -->
     <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
@@ -83,19 +89,16 @@
   {% block outsidecontainer %}
 
   {% endblock %}
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-              {% block content %}
+    <div class="row" style="padding-top: 45px;">
+        <div class="col-md-12">
+          {% block content %}
 
 
 
 
-              {% endblock %}
-            </div><!-- // .col -->
-        </div><!-- // .row -->
-    </div><!-- // .container -->
+          {% endblock %}
+        </div><!-- // .col -->
+    </div><!-- // .row -->
 
 
     <!-- Footer
@@ -103,56 +106,25 @@
     <div id="tf-footer">
         <div class="container"><!-- Container -->
             <div class="text-center">
-                <img src="../assets/img/logo.png" class="img-responsive logo" alt="Antelope">
-                <blockquote><a href="#"><em>Challenge My Faith</em></a> is a Minimal, elegant looking theme that is perfect for personal, corporate, business, travel blog, photography, fashion blogging and more. Built with <a href="http://getbootstrap.com/" target="_blank">Bootstrap 3.3.2 Framework</a>, it is totally responsive and easy to use.
-                    <footer>Stanley Hauerwas</footer>
+                <blockquote>
+                    <em>&quot;For I take it to be crucial that Christians
+                      must live in a manner that their lives are unintelligible if
+                      the God we worship in Jesus Christ does not exist.&quot;</em>
+                    <footer>Dr. Stanley Hauerwas</footer>
                 </blockquote>
             </div>
-
-            <div class="row"><!-- Row -->
-
-                <div class="col-md-4"> <!-- Footer Widget Area #1 4 Cols -->
-                    <div class="widget newsletter"><!-- Newsletter Subscription -->
-                        <h4>Newsletter</h4>
-                        <div class="widget-wrap">
-                            <p>Sign up to receive updates and the latests news about Antelope. We respect your privacy and we don't spam.</p>
-                            <form>
-                                <input type="text" class="form-control" placeholder="Your Email">
-                                <button type="submit" class="btn btn-default btn-block tf-btn color">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div><!-- end Footer Widget Area #1 4 Cols -->
-
-                <div class="col-md-4"> <!-- Footer Widget Area #2 4 Cols -->
-                    <div class="widget page-links"><!-- Social Media Connection -->
-                        <h4>Page Links</h4>
-                        <div class="widget-wrap">
-                            <ul class="list-unstyled links"><!-- Social Share -->
-                                <li><a href="#">Travel</a></li>
-                                <li><a href="#">Fashion</a></li>
-                                <li><a href="#">Photography</a></li>
-                                <li><a href="#">Lifestyle</a></li>
-                                <li><a href="#">Blogging</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div><!-- end Footer Widget Area #2 4 Cols -->
-
-                <div class="col-md-4"> <!-- Footer Widget Area #3 4 Cols -->
-                    <div class="widget facebook"><!-- Facebook Like Page -->
-                        <h4>Like Us on Facebook</h4>
-                        <div class="fb-page" data-href="https://www.facebook.com/themeforces?ref=hl" data-width="100%" data-height="400px" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/themeforces"><a href="https://www.facebook.com/themeforces">Themeforces</a></blockquote></div></div>
-                    </div>
-                </div><!-- end Footer Widget Area #3 4 Cols -->
-
-            </div><!-- end Row -->
         </div><!-- End Container -->
     </div>
-    <nav class="bottom-footer"> <!-- Footer Bottom Nav-->
+    <nav class="bottom-footer" style="padding-bottom:20px;"> <!-- Footer Bottom Nav-->
         <div class="container"><!-- Container -->
             <a href="#top" class="scroll top"><i class="fa fa-long-arrow-up"></i></a> <!-- Go To Top Link -->
-            <p class="copyright-txt">© 2015 Copyright by ThemeForces | All rights reserved</p>
+            <p class="copyright-txt">
+                &copy; <script>var today = new Date(); document.write(today.getFullYear());</script>
+                ChallengeMyFaith.com
+                &nbsp; | &nbsp; All rights reserved
+                &nbsp; | &nbsp; <a href="/terms-conditions">Terms &amp; Conditions</a>
+                &nbsp; | &nbsp; <a href="/contact">Contact</a>
+            </p>
         </div><!-- End Container -->
     </nav>
 

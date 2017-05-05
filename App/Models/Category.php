@@ -9,6 +9,12 @@ use PDO;
  */
 class Category extends \Core\Model
 {
+
+    /**
+     * get categories
+     *
+     * @return Object The categories
+     */
     public static function getCategories()
     {
         try
@@ -16,7 +22,8 @@ class Category extends \Core\Model
             // establish db connection
             $db = static::getDB();
 
-            $sql = "SELECT * FROM category";
+            $sql = "SELECT * FROM categories
+                    ORDER BY category_title";
             $stmt = $db->query($sql);
             $categories = $stmt->fetchAll(PDO::FETCH_OBJ);
 
@@ -30,30 +37,31 @@ class Category extends \Core\Model
     }
 
 
+
     /**
-     * gets business category name
+     * gets category by ID
      *
      * @param  integer $category The category ID
      * @return string           The category name
      */
-    public static function getCategoryName($category)
+    public static function getCategoryById($category_id)
     {
         try
         {
             // establish db connection
             $db = static::getDB();
 
-            $sql = "SELECT name FROM category WHERE id = :id";
+            $sql = "SELECT * FROM categories
+                    WHERE category_id = :category_id";
             $stmt = $db->prepare($sql);
             $parameters = [
-                ':id' => $category
+                ':category_id' => $category_id
             ];
             $stmt->execute($parameters);
-            $result = $stmt->fetch(PDO::FETCH_OBJ);
-            $category_name = $result->name;
+            $category = $stmt->fetch(PDO::FETCH_OBJ);
 
             // return value to Listing Controller
-            return $category_name;
+            return $category;
         }
         catch(PDOException $e)
         {

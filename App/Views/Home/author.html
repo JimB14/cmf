@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ post.post_title }}
+{% endblock %}
+
+{% block metadescription %}
+  Challenge My Faith
+{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block outsidecontainer %}
+    <div id="top"></div><!-- Scroll to Top ID -->
+{% endblock %}
+
+{% block content %}
+
+    <!-- Page Title
+    ====================================-->
+    <div id="tf-page-header" class="text-center">
+        <div class="container">
+            <h5><em>posts written by</em></h5>
+            <hr>
+            <h2 class="text-uppercase">{{ author_name }}</h2>
+        </div>
+    </div>
+
+    <!-- Blog Body
+    ====================================-->
+    <div id="tf-content" class="category">
+        <div class="container"><!-- Container -->
+            <div class="row"><!-- Row -->
+
+                <div class="col-md-10 col-md-offset-1"> <!-- Left Content for Blog Posts -->
+
+                  {% if posts %}
+                    {% for post in posts %}
+                      <div class="post-block">
+                          <div class="post-detail">
+                              <a href="archives.html" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
+                              <h2><a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}">{{ post.post_title }}</a></h2> <!-- Post Title-->
+                              <div class="img-wrap"> <!-- Image Wrap -->
+                                  <div class="metas">
+                                      <a href="/home/get-posts-by-category/{{ post.category_id }}" class="meta-cat">{{ post.category_title }}-{{ post.category_div }}</a>
+                                      <a href="/home/get-author-posts/{{ post.post_author }}" class="meta-author">{{ post.user_display_name }}</a>
+                                  </div>
+                                  <img src="/assets/images/uploaded_post_images/{{ post.post_img }}" class="img-responsive" alt="{{ post.post_title }} by {{ post.user_display_name }}">
+                              </div>
+
+                              {{ ((post.post_content|striptags)|raw)|slice(0,400) }}
+                          </div>
+
+                          <ul class="list-inline social"><!-- Social Share -->
+                              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                              <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                              <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                              <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
+                          </ul>
+
+                          <a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}" class="btn btn-default tf-btn txt-link">Continue Reading</a>
+
+                      </div><!-- end Post #1-->
+                    {% endfor %}
+                  {% else %}
+                    <div class="alert alert-danger" style="margin-bottom:130px;">
+                        <p class="text-center">
+                            No posts to display.
+                        </p>
+                    </div>
+                  {% endif %}
+
+
+                  {% if  allposts|length > 0 %}
+                    <div class="text-center"><!-- Pagination -->
+                        <nav id="tf-pagination">
+                            <ul class="pagination">
+                                <!-- <li>
+                                  <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                  </a>
+                                </li> -->
+                                <li><a class="{% if offset == 0 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=0&amp;limit=5">1</a></li>
+                                {% if  allposts|length > 5 %}
+                                <li><a class="{% if offset == 5 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=5&amp;limit=10">2</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 10 %}
+                                <li><a class="{% if offset == 10 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=10&amp;limit=15">3</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 15 %}
+                                <li><a class="{% if offset == 15 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=15&amp;limit=20">4</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 20 %}
+                                <li><a class="{% if offset == 15 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=20&amp;limit=25">4</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 25 %}
+                                <li><a class="{% if offset == 15 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=25&amp;limit=30">4</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 30 %}
+                                <li><a class="{% if offset == 15 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=30&amp;limit=35">4</a></li>
+                                {% endif %}
+                                {% if  allposts|length > 35 %}
+                                <li><a class="{% if offset == 15 %}active-page{% endif %}" href="/home/get-specific-author-posts?author_id={{ author.user_id }}&amp;offset=35&amp;limit=40">4</a></li>
+                                {% endif %}
+                                <!-- <li>
+                                  <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                  </a>
+                                </li> -->
+                            </ul>
+                        </nav>
+                    </div><!-- end Pagination -->
+                  {% endif %}
+
+                </div><!-- End of Posts/Blogrol -->
+
+            </div><!-- end Row -->
+        </div><!-- End Container -->
+    </div>
+{% endblock %}

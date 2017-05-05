@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-    Error | ABT
+    Error | CMF
 {% endblock %}
 
 {% block css %}
@@ -10,20 +10,65 @@
 
 
 {% block content %}
-
-<div class="page-wrapper" style="min-height: 400px;">
-
-      <div style="margin-top:30px;">
-          {% if errorMessage %}
-            <div class="alert alert-danger">
-                <p class="text-center">{{ errorMessage }}</p>
-            </div>
-          {% endif %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>something went wrong</em></h5>
+          <hr>
+          <h2 class="text-uppercase">To Err is Human</h2>
       </div>
+  </div>
 
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
 
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="post-block">
+                      <div class="post-detail">
 
-</div><!--  // .page-wrapper  -->
+                          <div style="margin-top:30px;">
+                              {% if reply_error_msg == 'true' %}
+                                <div class="alert alert-danger">
+                                    <p class="text-center">
+                                        You must be a registered user and logged
+                                        in to leave commments. Please <a href="/login">log in</a>
+                                        or <a href="/register">register</a> and log in.
+                                    </p>
+                                </div>
+                              {% endif %}
+
+                              {% if comment_error_msg == 'true' or vote_error_msg == 'true' %}
+                                <div class="alert alert-danger">
+                                    <p class="text-center">
+                                        You must be a registered user and logged
+                                        in to leave commments. Please <a href="/login">log in</a>
+                                        or <a href="/register">register</a> and log in.
+                                    </p>
+                                </div>
+                              {% endif %}
+
+                              {% if editcomment == 'true' %}
+                                <div class="alert alert-danger">
+                                    <p class="text-center">
+                                        It appears that this comment was
+                                        posted by another user. Only the comment
+                                        author can make editorial changes.
+                                    </p>
+                                </div>
+                              {% endif %}
+
+                          </div>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- end Row -->
+    </div><!-- End Container -->
+</div>
 {% endblock %}
 
 {% block bottomjs %}

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Edit comment | CMF
+{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+
+{% block content %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>make some changes</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Edit My Comment</h2>
+      </div>
+  </div>
+
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
+
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="post-block">
+                      <div class="post-detail">
+
+                        <form id="edit-comment-form" name="edit-comment-form" class="form" method="post"
+                          action="/comments/update-comment?comment_id={{ comment.comment_id }}&amp;user_id={{ session.user_id }}&amp;post_id={{ comment.comment_post_id }}">
+                            <div class="row">
+                                <!--  honeypot  -->
+                                <input type="hidden" name="honeypot">
+                                <!-- pass logged in user's email address -->
+                                <input type="hidden" class="form-control" name="email" value="{{ comment.comment_author_email }}">
+
+                                <div class="col-md-6" style="margin-bottom: 15px;">
+                                    <input style="background-color:#fff;" type="text"
+                                      class="form-control required" name="user_full_name"
+                                      placeholder="Your Name"
+                                      value="{{ comment.comment_author }}" disabled>
+                                </div>
+                                <!-- pass logged in user's email address -->
+                                <div class="col-md-6">
+                                    <input style="background-color:#fff;" type="url" class="form-control" placeholder="http://yourwebsite.com" name="comment_author_url" value="{{ comment.comment_author_url }}" disabled>
+                                </div>
+                            </div>
+                            <!-- textarea element must be on one unbroken line -->
+                            <textarea style="margin-bottom: 15px;" class="form-control required" name="post_comment" id="post_comment" rows="6" autofocus>{{ comment.comment_content }}</textarea>
+                            <button type="submit" class="btn btn-default btn-block tf-btn color">
+                              Update Comment
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div><!-- end Row -->
+    </div><!-- End Container -->
+</div>
+{% endblock %}
+
+{% block bottomjs %}
+<script>
+$(document).ready(function(){
+
+  $("#edit-comment-form").validate();
+
+});
+</script>
+{% endblock %}

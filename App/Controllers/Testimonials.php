@@ -42,31 +42,16 @@ class Testimonials extends \Core\Controller
     public function indexAction()
     {
         // get all testimonials
-        $content = Testimonial::getAllTestimonials();
-
-        // get values from user_id column in $content array & store in associative array;
-        // http://php.net/manual/en/function.array-column.php
-        // $users = array_column($content, 'user_id');
+        $testimonials = Testimonial::getAllTestimonials();
 
         // test
         // echo '<pre>';
-        // print_r($users);
-        // echo '</pre>';
-        // exit();
-
-        // get user data
-        // foreach($users as $user_id)
-        // {
-        //     $user[$user_id] = User::getUser($user_id);
-        // }
-
-        // echo '<pre>';
-        // print_r($user);
+        // print_r($testimonials);
         // echo '</pre>';
         // exit();
 
         View::renderTemplate('Testimonials/index.html', [
-            'testimonials'      => $content,
+            'testimonials'      => $testimonials,
             // 'user'              => $user[$user_id], // assoc array
             'testimonialsindex' => 'active'
         ]);
@@ -126,7 +111,7 @@ class Testimonials extends \Core\Controller
             $user = User::getUser($_SESSION['user_id']);
 
             // store user_full_name in variable
-            $user_full_name = $user->first_name . ' ' . $user->last_name;
+            $user_full_name = $user->user_firstname . ' ' . $user->user_lastname;
 
             // send email to website owner or designee & pass testimonial data
             $result = Mail::sendNewTestimonialNotification($id, $user_id, $user_full_name, $token, $title, $testimonial);

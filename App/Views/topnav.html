@@ -15,51 +15,44 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li  class="{% if homeindex == 'active' %}active{% endif %}"><a href="index.html">Home</a></li>
-            <li><a href="fashion.html">Fashion</a></li>
-            <li><a href="lifestyle.html">Lifestyle</a></li>
-            <li><a href="photography.html">Photography</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li class="{% if homeindex == 'active' %}active{% endif %}"><a href="/">Home</a></li>
+            <li class="{% if aboutindex == 'active' %}active{% endif %}"><a href="/about">About</a></li>
+            <!-- <li class="{% if contactindex == 'active' %}active{% endif %}"><a href="/contact">Contact</a></li> -->
+            <li class="{% if testimonialindex == 'active' %}active{% endif %}"><a href="/testimonials">Testimonials</a></li>
             {% if session.user %}
-              <li>
-                <a href="/testimonials/add-testimonial">
-                  Add testimonial
-                </a>
-              </li>
+              {% if session.user_status == 0 %}
+                <li>
+                  <a href="/testimonials/add-testimonial">
+                    Add testimonial
+                  </a>
+                </li>
+              {% endif %}
               <li>
                 <a>
-                  <span style="color:#ff0000;">
-                    Welcome {% if session.company %}{{ session.company }}{% else %}{{ session.full_name }}{% endif %}!
+                  <span style="color:#BE834A;">
+                    Welcome {{ session.full_name }}!
                   </span>
                 </a>
               </li>
-            {% endif %}
-            {% if session.user == false %}
-              <li class="{% if registerindex == 'active' %}active-menu-selection{% endif %}"><a href="/register">Register</a></li>
             {% endif %}
           </ul>
 
           <ul class="nav navbar-nav navbar-right">
 
-              {% if (session.loggedIn == 'true' and session.user == true and session.access_level == 2) or (session.superUser == 'true') %}
+              {% if (session.user_id and session.user_status == 5) or (session.user_superuser == 'true') %}
                   <li class=dropdown>
-                      <a href=# class=dropdown-toggle id=drop1 data-toggle=dropdown role=button aria-haspopup=true aria-expanded=false>
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                         Admin
-                        <span class=caret></span>
+                        <span class="caret"></span>
                       </a>
-                      <ul class=dropdown-menu aria-labelledby=drop1>
-                        {% if session.access_level == 2 %}
-                          <li><a href=/admin/brokers/index?user_id={{ session.user_id }}>Admin Panel</a></li>
-                          <li role=separator class=divider></li>
+                      <ul class="dropdown-menu">
+                        {% if session.user_status == 5 %}
+                          <li><a href="/admin/authors/index?user_id={{ session.user_id }}">Admin Panel</a></li>
+                          <li role="separator" class="divider"></li>
                         {% endif %}
-                        {% if (session.loggedIn == 'true') and (session.superUser == 'true') %}
-                          <li><a href=/admin/siteadmin/index?user_id={{ session.user_id }}>Site Administration</a></li>
+                        {% if (session.user_id) and (session.user_superuser == 'true') %}
+                          <li><a href="/admin/siteadmin/index?user_id={{ session.user_id }}">Site Administration</a></li>
                         {% endif %}
-                        <!-- <li role=separator class=divider></li>
-                        <li><a href=#>Franchisor Admin</a></li>
-                        <li role=separator class=divider></li>
-                        <li><a href=#>FSBO Admin</a></li> -->
                       </ul>
                   </li>
               {% endif %}
@@ -68,17 +61,28 @@
                   <li><a href="/logout"><span class="glyphicon glyphicon-lock"></span> Logout</a></li>
               {% endif %}
               {% if session.user == false %}
-                  <li class=""><a href="/login"><span class="glyphicon glyphicon-lock"></span> Log In</a></li>
+                  <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        Log In / Register
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu" style="min-width:184px;">
+                          <li><a href="/register">Register</a></li>
+                          <li role="separator" class="divider"></li>
+                          <li><a href="/login">Log In</a></li>
+                      </ul>
+                  </li>
               {% endif %}
           </ul>
 
-          <ul class="nav navbar-nav navbar-right">
+          <!-- <ul class="nav navbar-nav navbar-right">
             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
             <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
             <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-          </ul>
+          </ul> -->
+
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->
 </nav>

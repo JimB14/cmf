@@ -99,11 +99,11 @@ class UserPending extends \Core\Model
                 try
                 {
                     $sql = "UPDATE users SET
-                            active = 1
-                            WHERE id = :id";
+                            user_active = 1
+                            WHERE user_id = :user_id";
                     $stmt = $db->prepare($sql);
                     $parameters = [
-                        ':id' => $user_id
+                        ':user_id' => $user_id
                     ];
                     $stmt->execute($parameters);
                 }

@@ -5,107 +5,87 @@
 {% endblock %}
 
 {% block metadescription %}
-    Contact American Biz Trader. Businesses for sale nationwide presented by America's best brokers.
+    Contact Challenge My Faith.
 {% endblock %}
 
 {% block content %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>email us your concern</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Contact Us</h2>
+      </div>
+  </div>
 
-<div class="page-wrapper">
-    <div class="row">
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
 
-        <div class="col-md-12">
-            <h1>Contact Us</h1>
-            <hr>
-        </div>
+            <div class="col-md-10 col-md-offset-1"> <!-- About us content -->
+                <div class="post-block">
+                    <div class="post-detail">
+                      {% if session.contacterror %}
+                        <div class="col-sm-offset-2 col-sm-10">
+                          {% include 'Error/errormessage.html' %}
+                        </div>
+                      {% endif %}
 
-        <div class="col-md-8">
+                        <form name="contactform" id="contactform" class="form"
+                            action="/contact/submit-contact" method="post" novalidate>
 
-            {% if session.contacterror %}
-              <div class="col-sm-offset-2 col-sm-10">
-                {% include 'Error/errormessage.html' %}
-              </div>
-            {% endif %}
+                            <!-- honeypot -->
+                            <input type="hidden" name="honeypot" id="honeypot">
 
-              <form name="contactform" id="contactform" class="form-horizontal"
-                  action="contact/submit-contact" method="post" novalidate>
+                            <div class="form-group">
+                                <input style="background: #fff;" type="text" class="form-control input-field required"
+                                  name="first_name" id="first_name"
+                                  placeholder="First name" autofocus>
+                            </div>
 
-                  <div class="form-group">
-                      <label for="first_name" class="col-sm-2 control-label">
-                        First name
-                      </label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control required"
-                          name="first_name" id="first_name"
-                          placeholder="First name" autofocus>
-                      </div>
-                  </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-field required"
+                                  name="last_name" id="last_name" placeholder="Last name">
+                            </div>
 
-                  <div class="form-group">
-                      <label for="last_name" class="col-sm-2 control-label">
-                        Last name
-                      </label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control required"
-                          name="last_name" id="last_name" placeholder="Last name">
-                      </div>
-                  </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control input-field required"
+                                  name="telephone" id="telephone" placeholder="Telephone">
+                            </div>
 
-                  <div class="form-group">
-                      <label for="telephone" class="col-sm-2 control-label">
-                        Telephone
-                      </label>
-                      <div class="col-sm-10">
-                          <input type="text" class="form-control required"
-                          name="telephone" id="telephone" placeholder="Telephone">
-                      </div>
-                  </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control input-field required email"
+                                  name="email" id="email" placeholder="Email - user@example.com">
+                            </div>
 
-                  <div class="form-group">
-                      <label for="email" class="col-sm-2 control-label">
-                        Email
-                      </label>
-                      <div class="col-sm-10">
-                          <input type="email" class="form-control required email"
-                          name="email" id="email" placeholder="user@example.com">
-                      </div>
-                  </div>
+                            <div class="form-group">
+                                <textarea class="form-control input-field" name="message" id="message" rows="5" placeholder="How can we help?">{% if message %}{{ message }}{% endif %}</textarea>
+                            </div>
 
-                  <div class="form-group">
-                      <label for="message" class="col-sm-2 control-label">
-                        Message
-                      </label>
-                      <div class="col-sm-10">
-                          <textarea class="form-control" name="message" id="message" rows="5" placeholder="How can we help?">{% if message %}{{ message }}{% endif %}</textarea>
-                      </div>
-                  </div>
+                            <!-- Google recaptcha -->
+                            <!-- <div class="form-group">
+                                  <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
+                            </div>
 
-                  <!-- Google recaptcha -->
-                  <div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                        <div class="g-recaptcha" data-sitekey="{{ site_key }}"></div>
-                      </div>
-                  </div>
+                            <hr> -->
 
-                  <hr>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default btn-block tf-btn color">
+                                  Submit
+                                </button>
+                            </div>
 
-                  <div class="form-group">
-                      <div class="col-sm-offset-2 col-sm-10">
-                          <button type="submit" class="btn btn-primary">
-                            Submit
-                          </button>
-                      </div>
-                  </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
 
-              </form>
-
-          </div>
-
-          <div class="col-md-4">
-
-          </div><!-- // .col-md-4  -->
-
-    </div><!-- // .row  -->
-</div><!-- // .page-wrapper  -->
+        </div><!-- end Row -->
+    </div><!-- End Container -->
+</div>
 {% endblock %}
 
 
@@ -114,6 +94,14 @@
 <script>
 $(document).ready(function(){
   $("#contactform").validate();
+
+  $(".input-field").focus(function(){
+      $(this).css("background-color", "#fff");
+  });
+  $(".input-field").blur(function(){
+      $(this).css("background-color", "#f6f6f6");
+  });
+
 });
 </script>
 

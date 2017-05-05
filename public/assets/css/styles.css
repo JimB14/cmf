@@ -12,8 +12,8 @@ CSS Style Structure
 - Hero / Slider
 - Buttons
 - Page Body/Content
-- Sidebar 
-- Footer Section 
+- Sidebar
+- Footer Section
 - Single Page
 /*===========================================*/
 
@@ -34,7 +34,7 @@ body {
     overflow-x: hidden;
     font-family: 'Roboto Condensed', sans-serif;
 }
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
     .container { width: 1100px }
 }
 h5 {
@@ -52,7 +52,7 @@ a.active { color: #be834a }
 p {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    margin-bottom: 30px;
+    margin-bottom: 5px;
     line-height: 26px;
 }
 .clearfix:after {
@@ -69,7 +69,7 @@ p {
 .nomargin { margin: 0 }
 
 /* =======================================
-Navigation / Menu 
+Navigation / Menu
 ========================================*/
 /* Layout Two */
 #top-header {
@@ -177,7 +177,7 @@ Hero/Slider
     margin: 15px auto;
 }
 /* Layout One */
-.carousel img{ 
+.carousel img{
     width: 100%;
     height: auto;
 }
@@ -439,7 +439,7 @@ ul.social li a i:hover { background: #333031 }
   margin-top: -60px;
 }
 /* ===============================
-Sidebar 
+Sidebar
 =================================*/
 .widget {
     background: #f6f6f6;
@@ -462,8 +462,8 @@ Sidebar
 }
 .social ul.social li { margin: 0 }
 .social ul.social { background: transparent}
-input.form-control,
-textarea { margin-bottom: 20px }
+/*input.form-control,
+textarea { margin-bottom: 20px }*/
 .form-control {
     display: block;
     width: 100%;
@@ -515,7 +515,7 @@ h3.media-heading {
     font-size: 20px;
     text-transform: uppercase;
     text-align: center;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 /* Categories Widget / Page Links*/
 ul.cat li,
@@ -601,11 +601,11 @@ ul.tags li a:hover {
 .customisable:link,
 .customisable:visited { color: #BE834A !important }
 
-/*============================= 
-Footer Section 
+/*=============================
+Footer Section
 ==============================*/
 #tf-footer {
-    padding: 5% 0;
+    padding: 0% 0;
     background: #F1F1F1;
     border-top: 4px solid #be834a;
 }
@@ -717,7 +717,7 @@ ul.list-block li i { margin-right: 10px }
 /* Related Posts */
 .comment-form,
 .comments,
-.related-posts { margin-bottom: 60px }
+.related-posts { margin-bottom: 40px }
 h4.title {
     background: #333031;
     color: #ffffff;
@@ -761,7 +761,7 @@ a:hover span.pull-right.fa.fa-long-arrow-left {
 /* Page Header */
 #tf-page-header {
     background: #F1F1F1;
-    padding: 2% 0;
+    padding: 1% 0;
 }
 #tf-page-header h5 { font-family: 'Playfair Display', serif }
 #tf-page-header h2 { letter-spacing: 10px }
@@ -809,4 +809,122 @@ p.help-block.text-danger li {
     height: 350px;
     margin: 40px 0;
     border: 4px solid #000000;
+}
+/* Views/registration/index.html */
+#registrationform .form-group {
+  margin-bottom: 0px;
+}
+
+/* Views/admin/index.html */
+.admin-statistics-list {
+  padding-left: 10px;
+}
+.admin-statistics-list li {
+  line-height: 16px;
+  font-size: 1.2em;
+  margin-bottom: .5em;
+}
+
+.admin-statistics-list p {
+  font-size: 1.2em;
+}
+span.bold {
+  font-weight: bold;
+}
+
+/* Errors from form validation */
+.error {
+  color: #be834a;
+}
+
+.home-recent-posts a {
+  color: #7a7375;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.home-recent-posts a:hover,
+.home-recent-posts p:hover {
+  color: #be834a;
+  text-decoration: none;
+}
+
+.home-recent-posts {
+  margin-bottom: 10px;
+  line-height:  28px !important;
+  border-bottom: 1px solid #eee;
+}
+
+.home-recent-posts:last-child {
+  border-bottom: none;
+}
+
+#admin-logout-btn:hover {
+  font-weight: bold;
+  color: #fff;
+  background-color: #000;
+  border:1px solid #fff;
+}
+
+#single-reply-box {
+  margin-top: 10px;
+ }
+
+ .single-reply-textarea {
+   display: none;
+ }
+
+ #reply-textarea {
+   width: 100%;
+   height: 100px;
+   border-color: #eee;
+   margin-top: 15px;
+   margin-bottom: 10px;
+ }
+
+ .reply-btn:hover {
+  cursor:pointer;
+ }
+
+ #registrationform .form-group {
+   margin-bottom: 15px;
+ }
+
+.upvote {
+  margin-top: 10px;
+  color: #ddd;
+}
+
+.upvote a {
+  color: #ddd;
+}
+.upvote a:hover {
+  color: #be834a;
+}
+.edit-comment {
+  padding-left: 0px;
+}
+.edit-comment a {
+  color: #ddd;
+}
+.edit-comment a:hover {
+  cursor: pointer;
+}
+.badge {
+  vertical-align: top;
+}
+.active-page {
+  background: #be834a !important;
+  color: #ffffff !important;
+}
+.testimonial-wrapper {
+  border-bottom: 1px solid #ddd;
+}
+.testimonial-wrapper:last-child {
+  border-bottom: none;
+}
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 15px 11px;
 }

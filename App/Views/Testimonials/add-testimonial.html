@@ -6,105 +6,90 @@
 
 
 {% block content %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>share your thoughts</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Testimonial</h2>
+      </div>
+  </div>
 
-<div class="page-wrapper">
-    <div class="row">
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
 
-        <div class="col-md-12">
-            <h1>Add Testimonial</h1>
-            <hr>
-        </div>
+            <div class="col-md-10 col-md-offset-1"> <!-- About us content -->
+                <div class="post-block">
+                    <div class="post-detail">
 
-        <div class="col-md-8">
-              <p class="col-sm-offset-3" style="margin-bottom: 28px;">
-                Thanks, {{ user.first_name }} {{ user.last_name }}, for taking
-                the time to share what American Biz Trader means to you and how
-                it has impacted your business.
-              </p>
+                        <p class="text-center" style="margin-bottom: 28px;">
+                          Thanks, {{ user.user_firstname }} {{ user.user_lastname }},
+                          for taking the time to share how Challenge My Faith
+                          has impacted you.
+                        </p>
 
-              {% if session.addtestimonialerror %}
-                {% include 'errormessage.php' %}
-              {% endif %}
+                        {% if session.addtestimonialerror %}
+                          {% include 'errormessage.php' %}
+                        {% endif %}
 
-              <form method="post" name="testimonialform" class="form-horizontal"
-                id="testimonialform" action="/testimonials/submit-testimonial">
+                        <form method="post" name="testimonialform" class="form"
+                          id="testimonialform" action="/testimonials/submit-testimonial?user_id={{ session.user_id }}">
 
-                  <div class="form-group">
-                      <label for="title"  class="col-sm-3 control-label">
-                        Title
-                      </label>
-                      <div class="col-sm-9">
-                          <input type="text" class="form-control required"
-                          id="title" name="title" autofocus
-                          placeholder="title, e.g. &quot;Great value!&quot;">
+                            <div class="form-group">
+                                <input style="background: #fff;" type="text" class="form-control required"
+                                id="title" name="title" placeholder="Title" autofocus>
+                            </div>
+
+                            <div class="form-group">
+                                <textarea rows="8" class="form-control required" id="testimonial" name="testimonial" placeholder="testimonial"></textarea>
+                                <script>
+                                  CKEDITOR.replace( 'testimonial' );
+                                </script>
+                            </div>
+
+                            <div class="form-group">
+                                <input type="text" class="form-control required"
+                                id="testimonial_full_name" name="testimonial_full_name" value="{{ user.user_firstname }} {{ user.user_lastname }}">
+                            </div>
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-default btn-block tf-btn color">
+                                  Submit Testimonial
+                                </button>
+                                <small>
+                                  <br>
+                                  *If approved, your tesitmonial will be posted
+                                  on this website.
+                                </small>
+                            </div>
+
+                        </form>
                       </div>
                   </div>
+              </div>
 
-                  <div class="form-group">
-                      <label for="testimonial"  class="col-sm-3 control-label">
-                        Testimonial
-                      </label>
-                      <div class="col-sm-9">
-                          <textarea rows="8" class="form-control required" id="testimonial" name="testimonial" placeholder="testimonial"></textarea>
-                          <script>
-                            CKEDITOR.replace( 'testimonial' );
-                          </script>
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <label for="title"  class="col-sm-3 control-label">
-                        Name
-                      </label>
-                      <div class="col-sm-9">
-                          <input type="text" class="form-control required"
-                          id="testimonial_full_name" name="testimonial_full_name" value="{{ user.first_name }} {{ user.last_name }}">
-                      </div>
-                  </div>
-
-                  <div class="form-group">
-                      <label for="title"  class="col-sm-3 control-label">
-                        Company
-                      </label>
-                      <div class="col-sm-9">
-                          <input type="text" class="form-control required"
-                          id="testimonial_company" name="testimonial_company" value="{{ user.company }}">
-                      </div>
-                  </div>
-
-                  <hr>
-
-                  <div class="form-group">
-                      <div class="col-sm-offset-3 col-sm-9" style="margin-bottom: 30px;">
-                          <button type="submit" class="btn btn-primary">
-                            Submit Testimonial
-                          </button>
-                          <small>
-                            <br>
-                            *If approved, your tesitmonial will be posted on our
-                            website. For search engines, be sure to include your
-                            company name in your testimonial.
-                          </small>
-                      </div>
-                  </div>
-
-              </form>
-        </div>
-
-        <div class="col-md-4">
-            {# % include 'franchise-sidebar.html' % #}
-            <br><br>
-        </div>
-
-    </div><!-- // .row  -->
-</div><!-- // .page-wrapper  -->
-
+          </div><!-- end Row -->
+      </div><!-- End Container -->
+  </div>
 {% endblock %}
 
 {% block bottomjs %}
   <script>
   $(document).ready(function(){
     //$("#testimonialform").validate();
+
+    $("#title").focus(function(){
+        $(this).css("background-color", "#fff");
+    });
+    $("#title").blur(function(){
+        $(this).css("background-color", "#f6f6f6");
+    });
+
   });
   </script>
 {% endblock %}

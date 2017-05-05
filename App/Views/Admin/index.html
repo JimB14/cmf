@@ -11,59 +11,40 @@
 
 {% block content %}
 <div class="container-fluid">
-  <img src="/assets/images/2.jpg" class="admin-bg"
-    alt="American Biz Trader">
+  <!-- <img src="#" class="admin-bg"  alt="Challenge My Faith"> -->
     <div class="row">
-        <div id="dashboard-toggle" class="col-sm-12" style="margin-top:-20px;margin-left:244px;">
-            <div class="dashboard-tips-wrapper">
-                <h1 class="text-center" style="margin-top:0px;">
-                  Welcome to American Biz Trader
+        <div id="dashboard-toggle" class="col-sm-12" style="margin-top:-20px;margin-left:195px;">
+            <div class="dashboard-tips-wrapper" style="padding-left:20px;">
+                <h1 class="text-center" style="margin-top:20px;">
+                  Admin Panel
                 </h1>
-                <h3 class="text-center" style="margin-top:0px;">
-                  We&apos;re here to help you SELL. Your <a href="/contact?id=feedback">feedback</a> is welcome.
-                </h3>
-                <h3 style="margin-bottom:15px;">Admin Features:</h3>
-                  <div class="admin-features-list">
+                <h3 style="margin-bottom:15px;font-weight:bold;">Statistics for {{ author.user_display_name }}</h3>
+                  <div class="admin-statistics-list">
+                    <p><span class="bold">Total number of posts</span></p>
+                    <ul>
+                      <li><span class="bold">Amount:</span> {{ posts|length }} </li>
+                    </ul>
+
+                    <p><span class="bold">Last post</span></p>
                       <ul>
-                        <li><span class="bold">Listing Manager:</span> One listing manager can create and manage ads for hundreds of agents.</li>
-                        <li><span class="bold">Lead Generation:</span> Leads are sent via email to the listing agent and copied to the Broker/Owner listed in <a href="/admin/brokers/company-profile?id={{ broker.broker_id }}#brokerowner">&quot;Company profile.&quot;</a></li>
-                        <li><span class="bold">Saved Leads:</span> All leads are saved. You can manage them in <a href="/admin/brokers/show-leads?id={{ broker.broker_id }}">&quot;My Leads&quot;</a></li>
-                        <li><span class="bold">Unlimited Listings:</span> Post unlimited business or commercial real estate listings</li>
-                        <li><span class="bold">Expert Profiles:</span> Brokers and Agents automatically appear in our searchable <a href="/find-a-business-expert">Experts Directory</a></li>
-                        <li><span class="bold">Locations:</span> Brokers and Agents may advertise in as many as five states.</li>
-                        <li><span class="bold">Photos:</span> Post up to six photos. We automatically re-size your images, so upload what you&apos;ve got (bigger is better).</li>
-                        <li><span class="bold">Free Image:</span> No photo? No worries. We provide your first photo: a hand-picked, hi-resolution image to help you look your best.</li>
-                        <li><span class="bold">Hide or Show Listings:</span> Under contract, going on vacation? You can hide or show a listing at any time without deleting it or losing any data.</li>
-                        <li><span class="bold">Closer:</span> Change listing status to &quot;Sold&quot; and it displays in the &quot;Sold Listings&quot; tab of your <a href="/admin/brokers/preview-company-page?id={{ broker.broker_id }}">company page</a>, listing agent profile page, and the ad itself.</li>
-                        <li><span class="bold">Search Engine Optimized:</span> What do we give Google, Bing &amp; Yahoo!? Precise information about each listing, company, and expert profile for search engine indexing to maximize visibility and drive leads.</li>
+                        <li><span class="bold">Title:</span> {{ last_post.post_title}}</li>
+                        <li><span class="bold">Category:</span> {{ last_post.category_title }}-{{ last_post.category_div }}</li>
+                        <li><span class="bold">Date:</span> {{ last_post.post_date|date("Y-m-d") }} </li>
+                      </ul>
+
+                    <p><span class="bold">Category with most posts</span></p>
+                      <ul>
+                        <li><span class="bold">Category:</span> </li>
+                        <li><span class="bold">Amount:</span> </li>
+                      </ul>
+
+                    <p><span class="bold">Post with most comments</span>  </p>
+                      <ul>
+                        <li><span class="bold">Title:</span> </li>
+                        <li><span class="bold">Number:</span> </li>
+                        <li><span class="bold">Date:</span> </li>
                       </ul>
                   </div>
-                <h3>Data Entry Services</h3>
-                <p>
-                    Need help? Do you lack the time, interest or personnel to post listings
-                    or build Expert Profiles for your agents?
-                </p>
-                <p>
-                    No worries. We&apos;ve got you covered. We charge
-                    as low $5.00 for each listing. <a href="/contact?id=help-posting">Contact</a>
-                    and our customer care staff with specifics
-                    <br>
-                    and we will be happy to help.
-                </p>
-                <h3>Testimonial</h3>
-                <p>
-                    Share your thoughts about American Biz Trader, and see it
-                    published.<sup>1</sup>
-                </p>
-                <p>
-                    <a class="btn btn-primary" href="/testimonials/add-testimonial">
-                      Add testimonial
-                    </a>
-                    <small>
-                      <br>
-                      <sup>1</sup>Testimonial must be approved before being published.
-                    </small>
-                </p>
             </div>
 
         </div><!-- // .col -->

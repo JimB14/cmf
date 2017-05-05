@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+
+{% block title %}
+  {{ post.post_title }} | CMF
+{% endblock %}
+
+{% block metadescription %}
+  {{ post.post_title }} by {{ post.user_display_name }} Challenge My Faith
+{% endblock %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block outsidecontainer %}
+    <div id="top"></div><!-- Scroll to Top ID -->
+{% endblock %}
+
+{% block content %}
+<!-- Blog Body
+====================================-->
+<div id="tf-content" class="blog layout-one">
+    <div class="container"><!-- Container -->
+        <div class="row"><!-- Row -->
+
+            <div class="col-md-10 col-md-offset-1"> <!-- Left Content for Blog Posts -->
+                <div class="blog-post"> <!-- Blog Posts -->
+
+                    <div class="post-detail"><!-- Page Basic Info (title, featured image, metas) -->
+                        <a href="archives.html" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
+                        <h2>{{ post.post_title }}</h2> <!-- Post Title-->
+
+                        <div class="img-wrap"> <!-- Image Wrap -->
+                            <div class="metas">
+                                <a href="fashion.html" class="meta-cat">{{ post.category_title }}-{{ post.category_div }}</a>
+                                <a href="authors.html" class="meta-author">{{ post.user_display_name }}</a>
+                            </div>
+                            <img src="/assets/images/uploaded_post_images/{{ post.post_img }}" class="img-responsive" alt="{{ post.post_title }} by {{ post.user_display_name }}">
+                        </div>
+                    </div><!-- end Page Basic Info (featured image, metas) -->
+
+                    <div class="post-content"> <!-- Post Main Content -->
+                        {{ post.post_content }}
+                    </div>
+
+                    <ul class="list-inline social"><!-- Social Share -->
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li> -->
+                    </ul>
+
+                    <!-- <h4 class="text-center">Tags</h4>
+                    <ul class="list-inline tags">
+                      {% for tag in tags %}
+                        <li><a href="#">{{ tag }}</a></li>
+                      {% endfor %}
+                    </ul> -->
+                </div><!-- end Blog Post -->
+
+                <div class="author-box"> <!-- About the Post Author -->
+                    <div class="media">
+                       <div class="media-left">
+                            <a href="/home/get-author-posts/{{ post.user_id }}">
+                              <img class="media-object" src="/assets/images/authors/{{ post.user_img }}" alt="{{ post.user_display_name }}"> <!-- Author Image -->
+                            </a>
+                        </div>
+                      <div class="media-body">
+                            <h4 class="media-heading">Written by {{ post.user_display_name }}</h4>
+                            {{ post.user_blurb }}
+                            <br><a href="/home/get-author-posts/{{ post.user_id }}">More Posts From {{ post.user_firstname }}</a>
+                      </div>
+                    </div>
+                </div> <!-- end About the Post Author -->
+
+
+
+                <div class="related-posts">
+                    <h4 class="title">Recent Posts</h4>
+                    <div class="row">
+                      {% for post in author_posts %}
+                        <div class="col-md-4">
+                            <div class="thumb-post"><!-- Thumbnail Post #1 -->
+                                <a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}" title="Read &quot;{{ post.post_title }}&quot;">
+                                  <img src="/assets/images/uploaded_post_images/{{ post.post_img }}" class="img-responsive" alt="Image">
+                                </a>
+                                <h3 class="media-heading">
+                                    <a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}">
+                                        {{ post.post_title }}
+                                    </a>
+                              </h3>
+                            </div>
+                        </div>
+                      {% endfor %}
+                    </div>
+                </div>
+
+
+
+                {% if comments|length > 0 %}
+                  <h4 class="title">{% if comments %}{{ comments|length }}{% endif %} {% if comments|length < 2 %}Comment{% else %}Comments{% endif %}</h4>
+                {% endif %}
+
+                {% for comment in comments %}
+                  <div class="comments"> <!-- Lists of Related Posts -->
+
+                      <div class="media comment"> <!-- Comment #1 with replies -->
+                          <div class="media-left">
+                              <a href="#">
+                                  <!-- <img class="media-object" alt="80x80" src="http://placehold.it/80x80"> -->
+                                  <span style="font-size: 40px;" class="glyphicon glyphicon-user"></span>
+                              </a>
+                          </div>
+                          <div class="media-body">
+                              <h5 class="media-heading">{{ comment.comment_author }} | <small><em>{{ comment.comment_date|date('m-d-Y h:i A')}}</em></small>
+                                  {% if comment.comment_updated_at %}
+                                    | <small>edited <em>{{ comment.comment_updated_at|date('m-d-Y h:i A')}}</em></small>
+                                  {% endif %}
+                                  <!-- <a class="reply-btn">
+                                      <span class="pull-right fa fa-long-arrow-left">
+                                          Reply
+                                      </span>
+                                  </a> -->
+
+                              </h5>
+                              <div>
+                                  {{ comment.comment_content }}
+                                  <div class="upvote">
+                                      {% if comment.comment_vote_count > 0 %}{{ comment.comment_vote_count }}{% endif %}
+                                      <a href="/comments/vote-up?comment_id={{ comment.comment_id }}&amp;post_id={{ comment.comment_post_id }}" title="Vote up"><span class="glyphicon glyphicon-menu-up"></span></a>
+                                      &nbsp; | &nbsp;
+                                      <a href="/comments/vote-down?comment_id={{ comment.comment_id }}&amp;post_id={{ comment.comment_post_id }}" title="Vote down"><span class="glyphicon glyphicon-menu-down"></span></a>
+                                  </div>
+                                  <div class="edit-comment">
+                                      <span><a href="/comments/edit-comment?comment_id={{ comment.comment_id }}&amp;user_id={{ session.user_id }}">edit</a></span>
+                                  </div>
+                                </div>
+
+                              <div class="col-md-10 single-reply-textarea">
+                                  <div class="form-group">
+                                      <form method="post"  name="reply_comment_form" id="reply_comment_form"
+                                        action="/comments/submit-reply-comment?comment_id={{ comment.comment_id }}&amp;post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}&amp;comment_user_id={{ comment.comment_user_id}}">
+                                          <!-- honeypot -->
+                                          <input type="hidden" name="honeypot">
+                                          <textarea id="reply-textarea" class="form-control required" name="reply_comment" placeholder="{% if not session.user %}Please log in, or register and log in to leave a comment{% else %}Your reply...{% endif %}"></textarea>
+                                          {% if not session.user %}
+                                              <p class="help-block small" style="line-height:15px;">
+                                                  <span style="color:#000;">
+                                                      *You are not logged in.
+                                                      Please <a href="/login">log in</a>,
+                                                      or <a href="/register">register</a>
+                                                      and log in to leave a comment.
+                                                  </span>
+                                              </p>
+                                          {% endif %}
+                                          <button type="submit" class="tf-btn color">
+                                              Submit as {{ user.user_firstname }}
+                                          </button>
+                                      </form>
+                                  </div>
+                              </div>
+
+                          </div>
+                      </div><!-- end Comment #1 with replies -->
+
+
+                        <!-- Comment Reply -->
+                        <!-- <div class="media reply-comment">
+                            <div class="media-left">
+                                <a href="#">
+                                    <img class="media-object" alt="80x80" src="http://placehold.it/80x80">
+                                    <span style="font-size: 60px;" class="glyphicon glyphicon-user"></span>
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h5 class="media-heading">{# comment.comment_author #} | <small><em>{# comment.comment_date|date('m-d-Y h:i A') #}</em></small>
+                                    <a href="#"><span class="pull-right fa fa-long-arrow-left"> Reply</span></a>
+                                </h5>
+                                {# comment.comment_content #}
+                            </div>
+                        </div> -->
+
+
+                  </div> <!--  end Lists of Related Posts -->
+                {% endfor %}
+
+
+              <!-- - - - - - - Comment Form  - - - - - - - - - - - - - - - - -->
+
+                <div class="comment-form">
+                    <h4 class="title">Leave A Comment</h4>
+
+                    <form id="comment-form" name="comment-form" class="form" method="post"
+                      action="/comments/submit-post-comment?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}">
+                        <div class="row">
+                            <!--  honeypot  -->
+                            <input type="hidden" name="honeypot">
+                            <!-- pass logged in user's email address -->
+                            <input type="hidden" class="form-control" name="email" value="{{ user.user_email }}">
+
+                            <div class="col-md-6" style="margin-bottom: 15px;">
+                                <input style="background-color:#fff;" type="text"
+                                  class="form-control required" name="user_full_name"
+                                  placeholder="Your Name"
+                                  value="{% if not session.user_id %}You must log in, or register and log in, to leave comments.{% else %}{{ user.user_firstname }} {{ user.user_lastname }}{% endif %}">
+                            </div>
+                            <!-- pass logged in user's email address -->
+                            <div class="col-md-6">
+                                <input type="url" class="form-control" placeholder="http://yourwebsite.com" name="comment_author_url">
+                            </div>
+                        </div>
+                        <!-- textarea element must be on one unbroken line -->
+                        <textarea style="margin-bottom: 15px;" class="form-control required" name="post_comment" id="post_comment" rows="6" placeholder="{% if not session.user_id %}You must log in, or register and log in, to leave comments.{% else %}Your Comment...{% endif %}"></textarea>
+                        <button type="submit" class="btn btn-default btn-block tf-btn color">
+                          Submit Comment
+                        </button>
+                    </form>
+                </div>
+
+            </div><!-- End of Posts/Blogrol -->
+
+        </div><!-- end Row -->
+    </div><!-- End Container -->
+</div>
+{% endblock %}
+
+{% block bottomjs %}
+<script>
+$(document).ready(function(){
+
+  $("#comment-form").validate();
+
+  $("#reply_comment_form").validate();
+
+  $(".reply-btn").click(function(){
+    var id = $(this).val();
+    console.log(id);
+    $(".single-reply-textarea").toggle('slow');
+  });
+
+});
+</script>
+{% endblock %}

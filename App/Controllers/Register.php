@@ -92,8 +92,8 @@ class Register extends \Core\Controller
         $user = User::getUser($user_id);
 
         // assign values from user object to variables
-        $email = $user->email;
-        $first_name = $user->first_name;
+        $email = $user->user_email;
+        $first_name = $user->user_firstname;
 
         // test
         // echo '<pre>';
@@ -117,8 +117,8 @@ class Register extends \Core\Controller
 
               $success_registration2 = "Please check your email to verify your
                 account. If you do not receive an email from
-                noreply@americanbiztrader.com in the next few minutes, please
-                check your spam folder and white-list americanbiztrader.com.";
+                noreply@challengemyfaith.com in the next few minutes, please
+                check your spam folder and white-list challengemyfaith.com.";
 
               View::renderTemplate('Success/index.html', [
                   'success_registration'  => 'true',
@@ -166,7 +166,7 @@ class Register extends \Core\Controller
         $token = isset($_REQUEST['token']) ? filter_var($_REQUEST['token'], FILTER_SANITIZE_STRING) : '';
         $user_id = isset($_REQUEST['user_id']) ? filter_var($_REQUEST['user_id'], FILTER_SANITIZE_STRING) : '';
 
-        // verify match in `users_pending`, if true, set active = 1
+        // verify match in `users_pending`, if true, set active = 1 & delete record from users_pending table
         $result = UserPending::verifyNewUserAccount($token, $user_id);
 
         // display success in view
@@ -217,6 +217,8 @@ class Register extends \Core\Controller
             ]);
         }
     }
+
+
 
 
 

@@ -22,13 +22,17 @@ class Testimonial extends \Core\Model
             // establish db connection
             $db = static::getDB();
 
-            $sql = "SELECT * FROM testimonials WHERE display = 1
-                    ORDER BY created_at DESC";
+            $sql = "SELECT testimonials.*, users.*
+                    FROM testimonials
+                    JOIN users ON
+                    testimonials.user_id = users.user_id
+                    WHERE testimonials.display = 1
+                    ORDER BY testimonials.created_at DESC";
             $stmt = $db->query($sql);
-            $content = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $testimonials = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
             // return object to Controller
-            return $content;
+            return $testimonials;
         }
         catch (PDOException $e)
         {
@@ -53,7 +57,6 @@ class Testimonial extends \Core\Model
         $title = ( isset($_REQUEST['title']) ) ? filter_var($_REQUEST['title'], FILTER_SANITIZE_STRING) : "";
         $testimonial = ( isset($_REQUEST['testimonial']) ) ? $_REQUEST['testimonial'] : "";
         $name = ( isset($_REQUEST['testimonial_full_name']) ) ? $_REQUEST['testimonial_full_name'] : "";
-        $company = ( isset($_REQUEST['testimonial_company']) ) ? $_REQUEST['testimonial_company'] : "";
 
         // echo $testimonial; exit();
 
@@ -92,8 +95,6 @@ class Testimonial extends \Core\Model
                     ':title'        => $title,
                     ':testimonial'  => $testimonial,
                     ':user_id'      => $_SESSION['user_id'],
-                    ':name'         => $name,
-                    ':company'      => $company,
                     ':token'        => $token
                 ];
 
@@ -108,12 +109,11 @@ class Testimonial extends \Core\Model
                     'id'          => $id,
                     'token'       => $token,
                     'name'        => $name,
-                    'company'     => $company,
                     'title'       => $title,
                     'testimonial' => $testimonial
                 ];
 
-                // return to Testimonials Controller 
+                // return to Testimonials Controller
                 return $results;
             }
             catch(PDOException $e)

@@ -1,0 +1,165 @@
+{% extends 'base-admin.html' %}
+
+{% block title %}
+  Update post | CMF
+{% endblock %}
+
+{% block css %}
+{% endblock %}
+
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div id="dashboard-toggle" class="col-md-8" style="margin-top:-20px;margin-left:205px;">
+
+          <h2>Update post</h2>
+          <hr>
+
+            <form method="post" action="/admin/authors/update-post?user_id={{ session.user_id }}&amp;post_id={{ post.post_id }}"
+              class="form-horizontal" name="update-post-form" id="update-post-form" enctype="multipart/form-data">
+
+                <div class="form-group">
+                    <label for="post_author" class="control-label col-sm-2">Author</label>
+                    <div class="col-sm-9">
+                        <input style="background-color: #fff;" type="text" class="form-control required" name="post_author"
+                        id="post_author" placeholder="Author" value="{{ post.user_display_name }}" disabled>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="post_category" class="control-label col-sm-2">
+                      Post category
+                    </label>
+                    <div class="col-sm-9">
+                        <select class="form-control required"
+                          name="post_category" id="post_category">
+                            <option value="{{ post.category_id }}">{{ post.category_title}}-{{ post.category_div }}</option>
+                            {% for category in categories %}
+                                <option value="{{ category.category_id }} ">
+                                  {{ category.category_title }}-{{ category.category_div }}
+                                </option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="post_title" class="control-label col-sm-2">Title</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control required" name="post_title"
+                        id="post_title" placeholder="Title" value="{{ post.post_title }}">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="biz_description" class="control-label col-sm-2">
+                      Content
+                    </label>
+                    <div class="col-sm-9">
+                      <textarea name="post_content" class="form-control required" id="post_content">{{ post.post_content }}</textarea>
+                      <script>
+                        CKEDITOR.replace( 'post_content' );
+                      </script>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-bottom:20px;">
+                    <label for="post_tags" class="control-label col-sm-2">
+                      Tags
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="text" name="post_tags" class="form-control required"
+                        id="post_tags" placeholder="List 3 - 6 words (must be comma separated)"
+                        value="{{ post.post_tags }}">
+                        <p class="help-block small" style="line-height:15px;">
+                            Use comma separated keywords, e.g. one, two, three
+                        </p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="post_img" class="control-label col-sm-2">
+                      Upload photo
+                    </label>
+                    <div class="col-sm-9">
+                        <input type="file" class="required" name="new_post_img" id="_new_post_img">
+                        <p class="help-block small" style="line-height:15px;max-width:450px;">
+                          *Must be at least 900px wide. Ideal image is 900px wide x 450px high (2:1).
+                          Images 900px wide and > 450px high will be automatically resized.
+                          Image must be gif, jpg, jpeg or png under 10MB.
+                        </p>
+                        <p>
+                            {% if post.post_img %}
+                              Current image
+                              <br>
+                              <img src="/assets/images/uploaded_post_images/{{ post.post_img }}" width="100">
+                            {% else %}
+                              No image
+                              <br>
+                              <i style="color: #c9c9c9;" class="fa fa-picture-o fa-4x" aria-hidden="true"></i>
+                            {% endif %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- <div class="form-group">
+                    <label for="no_image" class="control-label col-sm-2">
+                      No image
+                    </label>
+                    <div class="col-sm-9">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" name="no_image"
+                                id="no_image" value="1">
+                                <span>
+                                  I have no image, please add one for me
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div> -->
+
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-9">
+                        <button  id="submit-post-btn" type="submit"
+                          class="btn btn-default btn-block tf-btn color">
+                          Update post
+                      </button>
+                    </div>
+                </div>
+
+            </form>
+
+
+          </div><!--  // .col-md-8  -->
+      </div><!--  // .row  -->
+</div><!--  // .container  -->
+{% endblock %}
+
+
+{% block bottomjs %}
+<script>
+$(document).ready(function(){
+
+    // $("#update-post-form").validate();
+
+
+    // $("#submit-post-btn").click(function(){
+    //     $(this).html("Sending data. Please wait. . .");
+    // });
+
+    // remove or add required class based on no_image checkbox status
+    $("#no_image").change(function(){
+      if(this.checked){
+          $("#post_img").removeClass("required");
+      } else {
+        $("#post_img").addClass("required");
+      }
+
+    });
+
+
+});
+</script>
+{% endblock %}

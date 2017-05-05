@@ -6,73 +6,67 @@
 
 
 {% block content %}
-<div class="page-wrapper">
-    <div class="row">
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>log in</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Log In</h2>
+      </div>
+  </div>
 
-        <div class="col-md-12">
-            <h1>Log In</h1>
-            <hr>
-        </div>
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
 
-        <div class="col-md-8">
+              <div class="col-md-10 col-md-offset-1">
+                  <div class="post-block">
+                      <div class="post-detail">
 
-              {% if session.loginerror %}
-              <div class="col-sm-offset-3 col-sm-9">
-                {% include 'Error/errormessage.html' %}
-              </div>
-              {% endif %}
+                          {% if session.loginerror %}
+                            {% include 'Error/errormessage.html' %}
+                          {% endif %}
 
-              <form name="loginform" id="loginform" action="login/login-user"
-                method="post" class="form-horizontal">
+                          <form name="loginform" id="loginform" action="login/login-user"
+                            method="post" class="form">
 
-                  <!--<input type="hidden" name="_token" value="{!! htmlspecialchars($signer->getSignature()) !!}">-->
-                  <div class="form-group has-feedback">
-                      <label for="email" class="col-sm-3 control-label">
-                        Email
-                      </label>
-                      <div class="col-sm-9">
-                          <input type="email" class="form-control email required"
-                          name="email" id="email" placeholder="user@example.com"
-                          autofocus>
-                          <span class="glyphicon form-control-feedback" id="email1"></span>
-                      </div>
-                  </div>
+                              <!--<input type="hidden" name="_token" value="{!! htmlspecialchars($signer->getSignature()) !!}">-->
+                              <div class="form-group has-feedback">
+                                  <input style="background:#fff;" type="email" class="form-control input-field email required"
+                                  name="email" id="email" placeholder="user@example.com"
+                                  autofocus>
+                                  <span class="glyphicon form-control-feedback" id="email1"></span>
+                              </div>
 
-                  <div class="form-group has-feedback">
-                      <label for="password" class="col-sm-3 control-label">
-                        Password
-                      </label>
-                      <div class="col-sm-9">
-                          <input type="password" class="form-control required"
-                          name="password" id="password" placeholder="Password">
-                          <span class="glyphicon form-control-feedback" id="password1"></span>
-                      </div>
-                  </div>
+                              <div class="form-group has-feedback">
+                                  <input type="password" class="form-control input-field required"
+                                  name="password" id="password" placeholder="Password">
+                                  <span class="glyphicon form-control-feedback" id="password1"></span>
+                              </div>
 
-                  <div class="col-sm-offset-3 col-sm-9" style="margin-top:-10px;font-size:90%;margin-bottom: 20px;">
-                      <a class="pull-left" href="login/forgot-password">Forgot password</a>
-                      <a class="pull-right" href="/register">Register</a>
-                  </div>
+                              <div style="margin-top:0px;font-size:90%;margin-bottom: 20px;">
+                                  <a class="pull-left" href="login/forgot-password">Forgot password</a>
+                                  <a class="pull-right" href="/register">Register</a>
+                              </div>
 
-                  <hr style="margin-top: 45px;">
+                              <div style="padding-top: 25px;"></div>
 
-                  <div class="form-group">
-                      <div class="col-sm-offset-3 col-sm-9">
-                          <button type="submit" class="btn btn-primary" id="login-btn">
-                            Sign in
-                          </button>
-                      </div>
-                  </div>
+                              <div class="form-group">
+                                  <button type="submit" class="btn btn-default btn-block tf-btn color" id="login-btn">
+                                    Sign in
+                                  </button>
+                              </div>
 
-              </form>
-        </div>
-
-        <div class="col-md-4">
-
-        </div><!-- // .col-md-4  -->
-
-    </div><!-- // .row  -->
-</div><!-- // .page-wrapper  -->
+                          </form>
+                    </div>
+                </div>
+            </div>
+        </div><!-- end Row -->
+    </div><!-- End Container -->
+</div>
 {% endblock %}
 
 
@@ -127,9 +121,17 @@ $(document).ready(function(){
 
      });
 
+
+     $(".input-field").focus(function(){
+         $(this).css("background-color", "#fff");
+     });
+     $(".input-field").blur(function(){
+         $(this).css("background-color", "#f6f6f6");
+     });
+
     //  $("#loginform").submit(function(){
     //    $("#login-btn").text("Processing request. Please wait...");
-    //  });  
+    //  });
 
 
 

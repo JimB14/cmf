@@ -58,17 +58,13 @@ class Logout extends \Core\Controller
         }
         else
         {
-
-            // get broker data
-            $broker = Broker::getBrokerByUserId($_SESSION['user_id']);
-
             // get user data
             $user = User::getUser($_SESSION['user_id']);
 
-            if($broker)
+            if($user)
             {
                 // send login notification email to `brokers`.`broker_email`
-                $result = Mail::LogoutNotification($broker, $user);
+                $result = Mail::LogoutNotification($user);
             }
 
             unset($_SESSION['user']);
@@ -78,11 +74,12 @@ class Logout extends \Core\Controller
             unset($_SESSION['full_name']);
             session_destroy();
 
-            $message = "You have been logged out";
+            $message = "You have been logged out.";
 
             // render view
             View::renderTemplate("Success/index.html", [
-                'message' => $message
+                'message' => $message,
+                'logout'  => 'true'
             ]);
         }
     }

@@ -3,7 +3,7 @@
 namespace App\Controllers; // identy namespace
 
 use \Core\View;
-use App\Models\Post;
+use \App\Models\Post;
 
 /**
  * Posts controller
@@ -54,6 +54,53 @@ class Posts extends \Core\Controller
         echo "Hello from the edit action in the Posts controller!";
         echo "<p>Route parameters: <pre>" .
               htmlspecialchars(print_r($this->route_params, true)) . "</pre></p>";
+    }
+
+
+
+    /**
+     * Updates post_status field in `posts` table
+     *
+     * @return boolean
+     */
+    public function publish()
+    {
+        // echo "Connected to publish method!"; exit();
+
+        // retrieve token, post_id and user_id from query string
+        $post_token = isset($_REQUEST['token']) ? filter_var($_REQUEST['token'], FILTER_SANITIZE_STRING) : '';
+        $post_id = isset($_REQUEST['post_id']) ? filter_var($_REQUEST['post_id'], FILTER_SANITIZE_NUMBER_INT) : '';
+        $user_id = isset($_REQUEST['user_id']) ? filter_var($_REQUEST['user_id'], FILTER_SANITIZE_STRING) : '';
+
+        // set post_status field to publish
+        $result = Post::setPostToDisplay($post_token, $post_id, $user_id);
+
+        if($result)
+        {
+            // get $user object
+            $user = User::getUser($user_id);
+            $user_email = $user->user_email;
+            $user_full_name = $user->user_firstname . ' ' . $user->user_lastname;
+
+            // test
+            // echo $user_email . '<br>';
+            // echo $user_full_name . "<br>";
+            // exit();
+
+            // send thank you email
+            $results = Mail::sendThanksForPostEmail($user_email, $user_full_name);
+
+            if($results)
+            {
+                header("Location: http://challengmyfaith.com");
+                exit();
+            }
+            else
+            {
+                echo "Error sending email";
+                exit();
+            }
+        }
     }
 
 }
