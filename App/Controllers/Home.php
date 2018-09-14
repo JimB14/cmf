@@ -200,6 +200,59 @@ class Home extends \Core\Controller
 
 
 
+    /**
+     * Get posts by users.user_id
+     *
+     * @return Object The posts
+     */
+    public function getPostsByAuthorAction()
+    {
+        // get post author name
+        $post_author = $this->route_params['author'];
+
+        // get post author ID
+        $post_author_id = $this->route_params['id'];
+
+        // test
+        // echo $post_author .'<br>';
+        // echo $post_author_id;
+        // exit();
+
+        // get post data
+        $posts = Post::getAuthorPosts($post_author_id, $limit=5);
+
+        // get all published posts
+        $all_published_posts = Post::getAllPublishedAuthorPosts($post_author_id);
+
+        // get author data
+        $author = User::getAuthor($post_author_id);
+
+        // test
+        // echo '<pre>';
+        // print_r($author);
+        // echo '</pre>';
+        // exit();
+
+        // store author display name in variable
+        $author_name = $author->user_display_name;
+
+        // test
+        // echo '<pre>';
+        // print_r($posts);
+        // echo '</pre>';
+        // exit();
+
+        View::renderTemplate('Home/author.html', [
+            'posts'       => $posts,
+            'author'      => $author,
+            'author_name' => $author_name,
+            'allposts'    => $all_published_posts,
+            'homeindex'   => 'active'
+        ]);
+    }
+
+
+
 
     /**
      * Get posts by users.user_id
@@ -279,9 +332,6 @@ class Home extends \Core\Controller
         // assign category title to variable
         $category_title = $category->category_title;
 
-        // assign category division to variable
-        $category_div = $category->category_div;
-
         // test
         // echo '<pre>';
         // print_r($category);
@@ -293,14 +343,12 @@ class Home extends \Core\Controller
         // print_r($all_published_posts);
         // echo '</pre>';
         // echo $category->category_title.'<br>';
-        // echo $category->category_div;
         // exit();
 
         View::renderTemplate('Home/category.html', [
             'posts'           => $category_posts,
             'category_id'     => $category_id,
             'category_title'  => $category_title,
-            'category_div'    => $category_div,
             'allposts'        => $all_published_posts,
             'homeindex'       => 'active',
             'offset'          => $offset
@@ -325,9 +373,6 @@ class Home extends \Core\Controller
         // assign category title to variable
         $category_title = $category->category_title;
 
-        // assign category division to variable
-        $category_div = $category->category_div;
-
         // get post data
         $posts = Post::getPostsByCategory($category_id);
 
@@ -351,7 +396,6 @@ class Home extends \Core\Controller
             'posts'           => $posts,
             'category_id'     => $category_id,
             'category_title'  => $category_title,
-            'category_div'    => $category_div,
             'allposts'        => $all_published_posts,
             'homeindex'       => 'active'
         ]);

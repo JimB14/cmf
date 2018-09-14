@@ -88,6 +88,7 @@ Navigation / Menu
     border-radius: 0;
     text-transform: uppercase;
     letter-spacing: 2px;
+    height: 110px;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > li > a {
@@ -656,6 +657,20 @@ a.top {
 /* =======================================
 Single Page
 ========================================*/
+#show-comments-h2,
+#leave-comment {
+  color: #333;
+  letter-spacing: 2px;
+}
+#show-comments-h2:hover,
+#leave-comment:hover {
+  cursor: pointer;
+  color: #BE834A;
+}
+#comments-section {
+  display: none;
+}
+
 #tf-content { padding-top: 60px }
 #tf-content.blog { padding-top: 100px }
 .blog-post {
@@ -717,7 +732,10 @@ ul.list-block li i { margin-right: 10px }
 /* Related Posts */
 .comment-form,
 .comments,
-.related-posts { margin-bottom: 40px }
+.related-posts {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
 h4.title {
     background: #333031;
     color: #ffffff;
@@ -788,7 +806,10 @@ a:hover span.pull-right.fa.fa-long-arrow-left {
 .category .post-block .post-detail h2 { text-align: center }
 .category .post-block .post-detail h2,
 .blog .post-detail h2 { margin-bottom: 20px}
-/* About Page */
+
+
+
+/* Views/About/index.html */
 #tf-content.contact,
 #tf-content.about { padding-top: 40px }
 p.help-block.text-danger li {
@@ -814,6 +835,53 @@ p.help-block.text-danger li {
 #registrationform .form-group {
   margin-bottom: 0px;
 }
+.two-columns {
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 40px; /* Firefox */
+  column-gap: 40px;
+}
+.two-columns p {
+  margin-bottom: 15px;
+}
+
+.three-columns {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 30px; /* Firefox */
+  column-gap: 30px;
+}
+.three-columns p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+@media (max-width: 768px) {
+  .three-columns {
+    -webkit-column-count: 2; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+    -webkit-column-gap: 30px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 30px; /* Firefox */
+    column-gap: 30px;
+  }
+}
+@media (max-width: 667px) {
+  .three-columns {
+    -webkit-column-count: 1; /* Chrome, Safari, Opera */
+    -moz-column-count: 1; /* Firefox */
+    column-count: 1;
+    -webkit-column-gap: 0px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 0px; /* Firefox */
+    column-gap: 0px;
+  }
+}
+
+
 
 /* Views/admin/index.html */
 .admin-statistics-list {
@@ -927,4 +995,65 @@ span.bold {
     position: relative;
     display: block;
     padding: 15px 11px;
+    margin-top: 30px;
+}
+/*  Views/Aphorisms/index.html  */
+#aphorism-table a {
+  color: #333031;
+}
+#aphorism-table a:hover {
+  color: #be834a;
+}
+#aphorism-table #author,
+#aphorism-table #quote {
+  font-size: 140%;
+}
+/* Views/base.html */
+.base-top-padding {
+  padding-top: 105px;
+}
+ @media (max-width:767px){
+   .base-top-padding {
+     padding-top: 105px;
+   }
+ }
+
+ /* Views/Authors/index.html */
+#authors-letters {
+  margin-right: 17px;
+  font-size: 1.5em;
+}
+#author-author-list-wrapper {
+  overflow: hidden;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #edeff0;
+  border-bottom: 1px solid #edeff0;
+}
+#author-author-list-wrapper p {
+  font-size: 18px;
+}
+#author-author-list {
+  -webkit-column-count: 3; /* Chrome, Safari, Opera */
+  -moz-column-count: 3; /* Firefox */
+  column-count: 3;
+  -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
+  -moz-column-gap: 20px; /* Firefox */
+  column-gap: 20px;
+}
+#author-author-list-wrapper h4 {
+  margin: 0px;
+}
+
+/* Views/Home/index.html */
+.navbar-brand img {
+  max-height: 95px;
+}
+.navbar-brand {
+  padding: 10px 15px;
+}
+.navbar-brand img {
+  padding: 0px 13px 0px 0px;
 }

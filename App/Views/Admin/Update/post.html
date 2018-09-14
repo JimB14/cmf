@@ -34,10 +34,10 @@
                     <div class="col-sm-9">
                         <select class="form-control required"
                           name="post_category" id="post_category">
-                            <option value="{{ post.category_id }}">{{ post.category_title}}-{{ post.category_div }}</option>
+                            <option value="{{ post.category_id }}">{{ post.category_title}}</option>
                             {% for category in categories %}
                                 <option value="{{ category.category_id }} ">
-                                  {{ category.category_title }}-{{ category.category_div }}
+                                  {{ category.category_title }}
                                 </option>
                             {% endfor %}
                         </select>

@@ -87,6 +87,46 @@ class User extends \Core\Model
 
 
 
+
+    /**
+     * gets authors starting with particular letter
+     *
+     * @param  String  $letter    The first letter of author last name
+     *
+     * @return Object             The author data
+     */
+    public static function getAuthorsByLastNameInitial($letter)
+    {
+        // establish db connection
+        $db = static::getDB();
+
+        try
+        {
+            $sql = "SELECT * FROM users
+                    WHERE user_lastname LIKE '$letter%'
+                    AND user_status = :user_status
+                    ORDER BY user_lastname";
+            $stmt = $db->prepare($sql);
+            $parameters = [
+                ':user_status'  => 5
+            ];
+            $stmt->execute($parameters);
+
+            // store user data in object
+            $authors = $stmt->fetchAll(PDO::FETCH_OBJ);
+
+            // return object to controller
+            return $authors;
+        }
+        catch(PDOException $e)
+        {
+            echo $e->getMessage();
+            exit();
+        }
+    }
+
+
+
     /**
      * gets User data
      *

@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+  Aphorisms | CMF
+{% endblock %}
+
+{% block metadescription %}
+  A compilation of thought-provoking aphorisms from a variety of topics.
+{% endblock %}
+
+
+{% block content %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container">
+          <h5><em>perspicacity worth sharing</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Aphorisms</h2>
+      </div>
+  </div>
+
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="contact">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
+
+            <div class="col-md-10 col-md-offset-1"> <!-- About us content -->
+                <div class="post-block">
+                    <div class="post-detail">
+                      <div class="img-wrap"> <!-- Image Wrap -->
+                          <img src="/assets/images/aphorisms-img01.jpg" class="img-responsive" alt="image">
+                      </div>
+
+                      <table class="table table-hover" id="aphorism-table">
+                        <thead>
+                            <th>
+                                <span id="author">Author</span>
+                                <a href="/aphorisms/sort-asc" style="padding-left: 5px;" title="Sort A-Z">
+                                    <span class="glyphicon glyphicon-chevron-down"><span>
+                                </a>
+                                <a href="/aphorisms/sort-desc" title="Sort Z-A">
+                                    <span class="glyphicon glyphicon-chevron-up"><span>
+                                </a>
+                            </th>
+                            <th>
+                              <span id="quote">Quote</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            {% for item in aphorisms %}
+                              <tr>
+                                  <td>{{ item.aphorism_firstname }} {{ item.aphorism_lastname }}</td>
+                                  <td>
+                                    {% if item.source_url %}
+                                        <a href="{{ item.source_url }}" target="_blank">
+                                          {{ item.aphorism_content|raw }}
+                                        </a>
+                                    {% else %}
+                                        {{ item.aphorism_content|raw }}
+                                    {% endif %}
+                                  </td>
+                              </tr>
+                            {% endfor %}
+                        </tbody>
+                      </table>
+
+                      </div>
+                  </div>
+              </div>
+
+          </div><!-- end Row -->
+      </div><!-- End Container -->
+  </div>
+{% endblock %}

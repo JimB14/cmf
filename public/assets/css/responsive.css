@@ -1,10 +1,10 @@
 /* iPads (portrait and landscape) ----------- */
-@media (max-width: 768px) {
+@media (max-width: 830px) {
 	body{ overflow-x: hidden;}
    #tf-menu,
-   #bs-example-navbar-collapse-1{ text-align: center;}
+   #bs-example-navbar-collapse-1{ text-align: center; background-color: #222;}
    .navbar-nav,
-   .navbar-right{ 
+   .navbar-right{
    		float: none !important;
    		text-align: center;
    		display: inline-block;
@@ -18,6 +18,10 @@
 
 	/* Layout Two */
 	ul.insta-photos li img { width: 100px }
+
+	.navbar-nav .open .dropdown-menu {
+		background-color: #e7e7e7;
+	}
 }
 
 @media (max-width: 767px) {
@@ -31,22 +35,22 @@
 	    border: 0;
 	    margin-right: 0;
 	}
-	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus{ background: transparent;}
 	.navbar-default .navbar-toggle {
 	    color: #FFF;
 	    width: 100%;
-	    text-align: center;
-	    left: 46%;
+	    /*text-align: center; */
+	    left: 88%;
 	}
 }
-@media (max-width: 603px) { 
+@media (max-width: 603px) {
 	#top-header.layout-two {
 	    margin-top: 50px;
 	}
 	.carousel-control .fa { top: 35% }
     a.meta-date{ position: relative }
-    .post-detail h2, 
+    .post-detail h2,
     .post-detail h2 a {
 	    left: auto;
 		margin-bottom: 10px;
@@ -57,9 +61,9 @@
 }
 
 @media (max-width: 460px) {
-	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus{ background: transparent;}
-	.navbar-default .navbar-toggle {left: 45%;}
+	.navbar-default .navbar-toggle {left: 86%;}
 	#header-slider .carousel-caption{
 		display: none;
 	}
@@ -69,7 +73,7 @@
 	.layout-one .blog-post a.meta-date,
 	.category a.meta-date { left: 39%}
 }
-@media (max-width: 360px) { 
+@media (max-width: 360px) {
 	.carousel-control .fa { top: 43% }
 	.post-detail h2, .post-detail h2 a {
 	    letter-spacing: 0;
@@ -81,32 +85,32 @@
 	.category a.meta-date { left: 38%;}
 	.media.reply-comment {margin-left: 0;}
 }
-@media (max-width: 320px) { 
-	.navbar-default .navbar-toggle:hover, 
+@media (max-width: 320px) {
+	.navbar-default .navbar-toggle:hover,
 	.navbar-default .navbar-toggle:focus{ background: transparent;}
-	.navbar-default .navbar-toggle {left: 43%;}
+	.navbar-default .navbar-toggle {left: 88%;}
 	.carousel-control .fa { top: 41% }
-	#top-header .logo { 
+	#top-header .logo {
 		width: 70%;
 		height: auto;
 	}
-	.post-detail h2, 
-	.post-detail h2 a { 
-		font-size: 22px; 
+	.post-detail h2,
+	.post-detail h2 a {
+		font-size: 22px;
 		line-height: 20px;
 	}
 	.sidebar ul.social li,
-	ul.social li { 
-		margin: 0; 
+	ul.social li {
+		margin: 0;
 		padding: 0;
 	}
 	.sidebar ul.social li a i,
-	ul.social li a i{ 
+	ul.social li a i{
 		width: 40px;
 		height: 40px;
 		font-size: 15px;
 	}
-	#tf-footer blockquote, 
+	#tf-footer blockquote,
 	.post-detail .img-wrap blockquote{ font-size: 16px;}
 	.metas a { display: none;}
 	a.meta-date{

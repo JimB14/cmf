@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block title %}
-  {{ post.category_title }}-{{ post.category_div }}
+  {{ post.category_title }}
 {% endblock %}
 
 {% block metadescription %}
@@ -23,7 +23,7 @@
         <div class="container">
             <h5><em>posts category</em></h5>
             <hr>
-            <h2 class="text-uppercase">{{ category_title }}-{{ category_div }}</h2>
+            <h2 class="text-uppercase">{{ category_title }}</h2>
         </div>
     </div>
 
@@ -39,12 +39,12 @@
                     {% for post in posts %}
                       <div class="post-block">
                           <div class="post-detail">
-                              <a href="archives.html" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
+                              <a href="#" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
                               <h2><a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}">{{ post.post_title }}</a></h2> <!-- Post Title-->
 
                               <div class="img-wrap"> <!-- Image Wrap -->
                                   <div class="metas">
-                                      <a href="/home/get-posts-by-category/{{ post.category_id }}" class="meta-cat">{{ post.category_title }}-{{ post.category_div }}</a>
+                                      <a href="/home/get-posts-by-category/{{ post.category_id }}" class="meta-cat">{{ post.category_title }}</a>
                                       <a href="/home/get-author-posts/{{ post.user_id }}" class="meta-author">{{ post.user_display_name }}</a>
                                   </div>
                                   <img src="/assets/images/uploaded_post_images/{{ post.post_img }}" class="img-responsive" alt="{{ post.post_title }} by {{ post.user_display_name }}">

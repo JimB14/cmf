@@ -1,10 +1,17 @@
 <!-- Main Navigation/Menu
 ====================================-->
+<!-- <div class="container">
+    <img src="/assets/images/logo.png">
+</div> -->
 <nav id="tf-menu" class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <a class="navbar-brand" href="/" title="Home page">
+            <img alt="Brand" src="/assets/images/logo-header-white-icon-no-earthquake2.png">
+          </a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+            data-target="#bs-example-navbar-collapse-1" style="padding:0;margin:0;">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -15,10 +22,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li class="{% if homeindex == 'active' %}active{% endif %}"><a href="/">Home</a></li>
+            <!-- <li class="{% if homeindex == 'active' %}active{% endif %}"><a href="/">Home</a></li> -->
             <li class="{% if aboutindex == 'active' %}active{% endif %}"><a href="/about">About</a></li>
+            <li class="{% if authorsindex == 'active' %}active{% endif %}"><a href="/authors">Authors</a></li>
+            <li class="{% if aphorismsindex == 'active' %}active{% endif %}"><a href="/aphorisms">Aphorisms</a></li>
             <!-- <li class="{% if contactindex == 'active' %}active{% endif %}"><a href="/contact">Contact</a></li> -->
-            <li class="{% if testimonialindex == 'active' %}active{% endif %}"><a href="/testimonials">Testimonials</a></li>
+            <!-- <li class="{% if testimonialsindex == 'active' %}active{% endif %}"><a href="/testimonials">Testimonials</a></li> -->
             {% if session.user %}
               {% if session.user_status == 0 %}
                 <li>
@@ -63,13 +72,13 @@
               {% if session.user == false %}
                   <li class="dropdown">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                        Log In / Register
+                        Register / Log In
                         <span class="caret"></span>
                       </a>
-                      <ul class="dropdown-menu" style="min-width:184px;">
-                          <li><a href="/register">Register</a></li>
+                      <ul class="dropdown-menu" style="min-width:177px;">
+                          <li><a href="/register"><i class="fa fa-user-plus" aria-hidden="true"></i> Register</a></li>
                           <li role="separator" class="divider"></li>
-                          <li><a href="/login">Log In</a></li>
+                          <li><a href="/login"><i class="fa fa-user" aria-hidden="true"></i> Log In</a></li>
                       </ul>
                   </li>
               {% endif %}

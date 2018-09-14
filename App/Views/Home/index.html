@@ -44,7 +44,7 @@
                     {% for post in posts %}
                       <div class="post-block"> <!-- Post #1-->
                           <div class="post-detail">
-                              <a href="archives.html" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
+                              <a href="#" class="meta-date"><span class="bolder">{{ post.post_date|date("d")}}</span><br>{{ post.post_date|date("M")}}</a>
                               <h2>
                                 <a href="/home/get-post?post_id={{ post.post_id }}&amp;user_id={{ session.user_id }}">
                                   {{ post.post_title }}
@@ -53,8 +53,8 @@
 
                               <div class="img-wrap"> <!-- Image Wrap -->
                                   <div class="metas">
-                                      <a href="/home/get-posts-by-category/{{ post.post_category }}" class="meta-cat">{{ post.category_title }}-{{ post.category_div }}</a>
-                                      <a href="/home/get-author-posts/{{ post.user_id }}" class="meta-author">{{ post.user_display_name }}</a>
+                                      <a href="/home/get-posts-by-category/{{ post.post_category }}" class="meta-cat">{{ post.category_title }}</a>
+                                      <a href="/home/get-posts-by-author/{{ post.user_firstname }}-{{ post.user_lastname }}/{{ post.user_id }}" class="meta-author">{{ post.user_display_name }}</a>
                                       {% if post.comment_count > 0 %}
                                       <a class="meta-cat" style="font-size:95%;">
                                           Comments: {{ post.comment_count }}
@@ -131,7 +131,9 @@
                         </div>
 
                         <div class="widget recent"><!-- Recent Post Widget -->
-                            <h4>Recent Posts <span class="badge" style="background-color: transparent;margin-top:-6px;">{{ recentposts|length }}</span></h4>
+                            <h4>Recent Challenges
+                              <!-- <span class="badge" style="background-color: transparent;margin-top:-6px;">{{ recentposts|length }}</span> -->
+                            </h4>
                             <div class="widget-wrap" style="padding: 10px 20px;">
                               {% for post in recentposts %}
                                 <div class="home-recent-posts"><!-- Thumbnail Post #1 -->
@@ -153,7 +155,7 @@
                                       <img style="width:70px;" src="/assets/images/authors/{{ author.user_img }}" alt="{{ post.user_display_name}}" class="img-circle author-img">
                                   </a>
                                   <p>
-                                    <a href="/home/get-author-posts/{{ author.user_id }}">{{ author.user_display_name }}</a>
+                                    <a href="/home/get-posts-by-author/{{ author.user_firstname }}-{{ author.user_lastname }}/{{ author.user_id }}">{{ author.user_display_name }}</a>
                                   </p>
                               </div>
                             {% endfor %}
@@ -165,7 +167,7 @@
                             <div class="widget-wrap">
                                 <ul class="list-unstyled cat"><!-- Social Share -->
                                   {% for category in categories %}
-                                    <li><a href="/home/get-posts-by-category/{{ category.category_id }}"><span class="text-capitalize">{{ category.category_title }}-{{ category.category_div }}</span></a></li>
+                                    <li><a href="/home/get-posts-by-category/{{ category.category_id }}"><span class="text-capitalize">{{ category.category_title }}</span></a></li>
                                   {% endfor %}
                                     <!-- <li><a href="#">Fashion</a></li>
                                     <li><a href="#">Photography</a></li>
@@ -176,7 +178,7 @@
                         </div>
 
                         <div class="widget ads-block"><!-- Social Media Connection -->
-                            <h4>Sponsered Ads</h4>
+                            <h4>Suggested Reading</h4>
                             <div class="widget-wrap">
                                 <a href="#"><img src="http://placehold.it/800x600" class="img-responsive" alt="Image"></a>
                                 <br>

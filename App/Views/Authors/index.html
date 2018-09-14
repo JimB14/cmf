@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}
+  Authors
+{% endblock %}
+
+{% block metadescription %}
+    Contact Challenge My Faith.
+{% endblock %}
+
+{% block content %}
+<!-- Top Header With Logo
+  ====================================-->
+  <div id="tf-page-header" class="text-center">
+      <div class="container-fluid">
+          <h5><em>our thought provokers</em></h5>
+          <hr>
+          <h2 class="text-uppercase">Authors</h2>
+      </div>
+  </div>
+
+  <!-- Blog Body
+  ====================================-->
+  <div id="tf-content" class="about">
+      <div class="container"><!-- Container -->
+          <div class="row"><!-- Row -->
+
+              <div class="col-md-10 col-md-offset-1"> <!-- Author content -->
+                  <div class="post-block">
+                      <div class="post-detail">
+                          <div class="img-wrap"> <!-- Image Wrap -->
+                              <img src="/assets/images/authors-img01.jpg" class="img-responsive" alt="image">
+                          </div>
+
+                          <div>
+                            <h3>Browse challenge authors</h3>
+                            {% for letter in alphabet %}
+                              <a href="/authors/get-authors/{{ letter }}">
+                                <span id="authors-letters">{{ letter }}</span>
+                              </a>
+                            {% endfor %}
+                          </div>
+
+                          <div id="author-author-list-wrapper">
+                              {% if authors %}
+                                {% for author in authors %}
+                                  <a href="/home/get-posts-by-author/{{ author.user_firstname }}-{{ author.user_lastname }}/{{ author.user_id }}">
+                                      <p id="author-author-list">{{ author.user_lastname}}, {{ author.user_firstname }}</p>
+                                  </a>
+                                {% endfor %}
+                              {% else %}
+                                  <div class="alert alert-info text-center">
+                                    <h4>Sorry. No authors beginning with &quot;{{ letter }}&quot; found.</h4>
+                                  </div>
+                              {% endif %}
+                          </div>
+
+                          <div>
+                            <h3>Browse challenge authors</h3>
+                            {% for letter in alphabet %}
+                              <a href="/authors/get-authors/{{ letter }}">
+                                <span id="authors-letters">{{ letter }}</span>
+                              </a>
+                            {% endfor %}
+                          </div>
+                      </div>
+                  </div><!-- end post-block -->
+              </div><!-- end Author content -->
+
+          </div><!-- end Row -->
+      </div><!-- End Container -->
+  </div>
+{% endblock %}

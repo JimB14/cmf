@@ -30,32 +30,6 @@ class Logout extends \Core\Controller
             header("Location: /login");
             exit();
         }
-        else if($value == 'cancel')
-        {
-            $cancel_message1 = "Your account has been canceled. Your credit card
-              will not be charged again.";
-
-            $cancel_message2 = "We are sorry to see you go.";
-
-            $cancel_message3 = "Your data will be deleted in the next 4 - 5 days.
-              If you want to reactivate your account, just Log In and follow the
-              instructions.";
-
-              unset($_SESSION['user']);
-              unset($_SESSION['loggedIn']);
-              unset($_SESSION['user_id']);
-              unset($_SESSION['access_level']);
-              unset($_SESSION['full_name']);
-              session_destroy();
-
-              // render view
-              View::renderTemplate("Success/index.html", [
-                  'cancelpayment'   => 'true',
-                  'cancel_message1' => $cancel_message1,
-                  'cancel_message2' => $cancel_message2,
-                  'cancel_message3' => $cancel_message3,
-              ]);
-        }
         else
         {
             // get user data
@@ -63,7 +37,7 @@ class Logout extends \Core\Controller
 
             if($user)
             {
-                // send login notification email to `brokers`.`broker_email`
+                // send login notification email
                 $result = Mail::LogoutNotification($user);
             }
 

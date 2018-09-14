@@ -67,6 +67,8 @@ $router->add('terms-conditions', ['controller' => 'Terms', 'action' => 'index'])
 
 $router->add('contact', ['controller' => 'Contact', 'action' => 'index']);
 $router->add('about', ['controller' => 'About', 'action' => 'index']);
+$router->add('authors', ['controller' => 'Authors', 'action' => 'index']);
+$router->add('aphorisms', ['controller' => 'Aphorisms', 'action' => 'index']);
 $router->add('testimonials', ['controller' => 'Testimonials', 'action' => 'index']);
 $router->add('register', ['controller' => 'Register', 'action' => 'index']);
 $router->add('login', ['controller' => 'Login', 'action' => 'index']);
@@ -78,8 +80,10 @@ $router->add('admin/{controller}/{action}', ['namespace' => 'Admin']); // assign
 $router->add('admin/{controller}/{action}/{id:\d+}', ['namespace' => 'Admin']); // assign the namespace
 
 $router->add('{controller}/{action}');
-$router->add('{controller}/{id:\d+}/{action}'); // 'id' can be anything
+$router->add('{controller}/{id:\d+}/{action}'); // 'id' can be any integer
 $router->add('{controller}/{action}/{id:\d+}'); // controller, action and id can be in any order
+$router->add('{controller}/{action}/{author:[A-za-z -]+}');
+$router->add('{controller}/{action}/{author:[A-za-z -]+}/{id:\d+}');
 
 
 
